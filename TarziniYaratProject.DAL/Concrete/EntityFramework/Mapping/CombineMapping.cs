@@ -26,12 +26,11 @@ namespace TarziniYaratProject.DAL.Concrete.EntityFramework.Mapping
                 .WillCascadeOnDelete(false);
 
             Property(a => a.Description)
-                .HasMaxLength(50);
+                .HasMaxLength(750);
 
             Property(a => a.CombineImage)
                 .IsRequired()
                 .HasMaxLength(500);
-
         }
     }
 }

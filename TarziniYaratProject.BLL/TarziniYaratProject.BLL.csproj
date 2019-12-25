@@ -52,6 +52,7 @@
     <Compile Include="Abstract\EntityServices\ICombineService.cs" />
     <Compile Include="Abstract\EntityServices\ICommentService.cs" />
     <Compile Include="Abstract\EntityServices\IImageService.cs" />
+    <Compile Include="Abstract\EntityServices\ILikeService.cs" />
     <Compile Include="Abstract\EntityServices\IPersonService.cs" />
     <Compile Include="Abstract\EntityServices\IProductDetailService.cs" />
     <Compile Include="Abstract\EntityServices\IProductService.cs" />
@@ -65,6 +66,7 @@
     <Compile Include="Concrete\CombineService.cs" />
     <Compile Include="Concrete\CommentService.cs" />
     <Compile Include="Concrete\ImageService.cs" />
+    <Compile Include="Concrete\LikeService.cs" />
     <Compile Include="Concrete\PersonService.cs" />
     <Compile Include="Concrete\ProductDetailService.cs" />
     <Compile Include="Concrete\ProductService.cs" />

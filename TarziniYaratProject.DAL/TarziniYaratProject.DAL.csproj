@@ -58,6 +58,7 @@
     <Compile Include="Abstract\ICombineDAL.cs" />
     <Compile Include="Abstract\ICommentDAL.cs" />
     <Compile Include="Abstract\IImageDAL.cs" />
+    <Compile Include="Abstract\ILikeDAL.cs" />
     <Compile Include="Abstract\IPersonDAL.cs" />
     <Compile Include="Abstract\IProductDAL.cs" />
     <Compile Include="Abstract\IProductDetailDAL.cs" />
@@ -70,11 +71,13 @@
     <Compile Include="Concrete\EntityFramework\DAL\CombineDAL.cs" />
     <Compile Include="Concrete\EntityFramework\DAL\CommentDAL.cs" />
     <Compile Include="Concrete\EntityFramework\DAL\ImageDAL.cs" />
+    <Compile Include="Concrete\EntityFramework\DAL\LikeDAL.cs" />
     <Compile Include="Concrete\EntityFramework\DAL\PersonDAL.cs" />
     <Compile Include="Concrete\EntityFramework\DAL\ProductDAL.cs" />
     <Compile Include="Concrete\EntityFramework\DAL\ProductDetailDAL.cs" />
     <Compile Include="Concrete\EntityFramework\DAL\PurchaseDAL.cs" />
     <Compile Include="Concrete\EntityFramework\DAL\PurchaseDetailDAL.cs" />
+    <Compile Include="Concrete\EntityFramework\Mapping\LikeMapping.cs" />
     <Compile Include="Concrete\EntityFramework\TarziniYaratDBContext.cs" />
     <Compile Include="Concrete\EntityFramework\TarziniYaratInitializer.cs" />
     <Compile Include="Concrete\EntityFramework\Mapping\AddressMapping.cs" />
@@ -89,6 +92,10 @@
     <Compile Include="Concrete\EntityFramework\Mapping\ProductMapping.cs" />
     <Compile Include="Concrete\EntityFramework\Mapping\PurchaseDetailMapping.cs" />
     <Compile Include="Concrete\EntityFramework\Mapping\PurchaseMapping.cs" />
+    <Compile Include="Migrations\201912251457290_First.cs" />
+    <Compile Include="Migrations\201912251457290_First.designer.cs">
+      <DependentUpon>201912251457290_First.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -105,6 +112,11 @@
       <Project>{50831e10-88ba-4edc-80fc-3ccf5cadfb05}</Project>
       <Name>TarziniYaratProject.Entities</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201912251457290_First.resx">
+      <DependentUpon>201912251457290_First.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

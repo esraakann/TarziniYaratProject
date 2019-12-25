@@ -12,6 +12,7 @@ namespace TarziniYaratProject.Entities.Models
         public Combine()
         {
             Comments = new HashSet<Comment>();
+            Likes = new HashSet<Like>();
         }
 
         public int CombineID { get; set; }
@@ -19,9 +20,9 @@ namespace TarziniYaratProject.Entities.Models
         public string CombineImage { get; set; }
         public int PersonID { get; set; }
         public int CommentCount { get; set; }
-        public int LikeCount { get; set; }
 
         public virtual ICollection<Comment> Comments { get; set; }
         public virtual Person Person { get; set; }
+        public virtual ICollection<Like> Likes { get; set; }
     }
 }

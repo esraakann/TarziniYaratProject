@@ -25,7 +25,7 @@ namespace TarziniYaratProject.BLL.IoC.Ninject
             Bind<IProductDetailDAL>().To<ProductDetailDAL>();
             Bind<IPurchaseDAL>().To<PurchaseDAL>();
             Bind<IPurchaseDetailDAL>().To<PurchaseDetailDAL>();
-            
+            Bind<ILikeDAL>().To<LikeDAL>();
         }
     }
 }

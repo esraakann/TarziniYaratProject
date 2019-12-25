@@ -15,6 +15,7 @@ namespace TarziniYaratProject.Entities.Models
             Combines = new HashSet<Combine>();
             Addresses = new HashSet<Address>();
             Purchases = new HashSet<Purchase>();
+            Likes = new HashSet<Like>();
         }
         public int PersonID { get; set; }
         public string FirstName { get; set; }
@@ -32,6 +33,7 @@ namespace TarziniYaratProject.Entities.Models
         public virtual ICollection<Comment> Comments { get; set; }
         public virtual ICollection<Combine> Combines { get; set; }
         public virtual ICollection<Address> Addresses { get; set; }
+        public virtual ICollection<Like> Likes { get; set; }
     }
 
     public enum PersonType

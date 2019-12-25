@@ -9,7 +9,7 @@
     {
         public Configuration()
         {
-            AutomaticMigrationsEnabled = true;
+            AutomaticMigrationsEnabled = false;
         }
 
         protected override void Seed(TarziniYaratProject.DAL.Concrete.EntityFramework.TarziniYaratDBContext context)

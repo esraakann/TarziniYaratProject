@@ -12,8 +12,10 @@ namespace TarziniYaratProject.DAL.Concrete.EntityFramework
 {
     public class TarziniYaratDBContext : DbContext
     {
-        public TarziniYaratDBContext() : base("Server=DESKTOP-781S50N\\MSSQLSERVER2; Database = TarziniYaratDb; uid=sa; pwd = 123")
-        { }
+        public TarziniYaratDBContext() : base(@"Server=EMRE\SQLEXPRESS; Database = TarziniYaratDb; uid=admin; pwd = 321")
+        {
+
+        }
 
 
         #region DB Set Tables
@@ -29,6 +31,7 @@ namespace TarziniYaratProject.DAL.Concrete.EntityFramework
         public DbSet<ProductDetail> ProductDetail { get; set; }
         public DbSet<Purchase> Purchase { get; set; }
         public DbSet<PurchaseDetail> PurchaseDetails { get; set; }
+        public DbSet<Like> Like { get; set; }
         #endregion
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
@@ -49,6 +52,7 @@ namespace TarziniYaratProject.DAL.Concrete.EntityFramework
             modelBuilder.Configurations.Add(new ProductDetailMapping());
             modelBuilder.Configurations.Add(new PurchaseMapping());
             modelBuilder.Configurations.Add(new PurchaseDetailMapping());
+            modelBuilder.Configurations.Add(new LikeMapping());
             #endregion
 
             modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
