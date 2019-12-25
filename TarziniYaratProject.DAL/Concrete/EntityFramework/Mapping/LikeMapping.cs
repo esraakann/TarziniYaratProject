@@ -11,7 +11,7 @@ namespace TarziniYaratProject.DAL.Concrete.EntityFramework.Mapping
     public class LikeMapping : EntityTypeConfiguration<Like>
     {
         public LikeMapping()
-        {
+        {//guggghıı
             HasKey(a => a.LikeID);
             Property(a => a.CommentID)
                 .IsOptional();
