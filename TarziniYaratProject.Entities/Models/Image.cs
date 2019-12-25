@@ -14,6 +14,7 @@ namespace TarziniYaratProject.Entities.Models
         public int ProductID { get; set; }
         public int PersonID { get; set; }
 
+        public virtual Person Person { get; set; }
         public virtual Product Product { get; set; }
 
 
