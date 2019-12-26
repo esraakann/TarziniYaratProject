@@ -26,7 +26,7 @@ namespace TarziniYaratProject.Entities.Models
         public int Discount { get; set; }
         public DateTime CreatedDate { get; set; }
         public int CategoryID { get; set; }
-        public int Gender { get; set; }
+        public string Gender { get; set; }
 
         public virtual Category Category { get; set; }
         public virtual Brand Brand { get; set; }
