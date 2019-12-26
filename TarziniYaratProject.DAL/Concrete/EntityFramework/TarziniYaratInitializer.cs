@@ -45,9 +45,10 @@ namespace TarziniYaratProject.DAL.Concrete.EntityFramework
             person.Password = "12345";
             person.Email = "fatihkrdmr24@gmail.com";
             person.Gender = "1";
-            person.Addresses.Add({
-                new Address { AddressID = 1, Country = "Turkey", PostCode = 34000, FullAddress = "Istanbul", IsActiveAddress = true, Distrinct = "Kagıthane", Province = "Ist" })
-            };
+            person.Addresses.Add(
+                new Address { AddressID = 1, Country = "Turkey", PostCode = 34000, FullAddress = "Istanbul", IsActiveAddress = true, Distrinct = "Kagıthane", Province = "Ist" }
+            );
+
 
 
             //kişiden sonra
