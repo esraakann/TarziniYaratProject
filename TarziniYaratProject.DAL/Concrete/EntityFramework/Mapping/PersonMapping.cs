@@ -49,7 +49,9 @@ namespace TarziniYaratProject.DAL.Concrete.EntityFramework.Mapping
                 .IsRequired();
 
             Property(a => a.Gender)
-                .IsRequired();
+                .IsRequired()
+                .HasMaxLength(1)
+                .HasColumnType("char");
 
             HasMany(a => a.Comments)
                 .WithRequired(a => a.Person)

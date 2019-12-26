@@ -19,6 +19,7 @@ namespace TarziniYaratProject.Entities.Models
         public int PersonID { get; set; }
         public int CombineID { get; set; }
         public int ProductID { get; set; }
+        public bool IsActive { get; set; }
 
         public virtual Product Product { get; set; } //should be nullable
         public virtual Combine Combine { get; set; } //should be nullable
