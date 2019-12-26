@@ -12,7 +12,7 @@ namespace TarziniYaratProject.DAL.Concrete.EntityFramework
 {
     public class TarziniYaratDBContext : DbContext
     {
-        public TarziniYaratDBContext() : base(@"Server=EMRE\SQLEXPRESS; Database = TarziniYaratDb; uid=admin; pwd = 321")
+        public TarziniYaratDBContext() : base(@"Server=DESKTOP-781S50N\MSSQLSERVER2; Database = TarziniYaratDb; uid=sa; pwd = 123")
         {
 
         }
