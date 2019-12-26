@@ -57,6 +57,8 @@ namespace TarziniYaratProject.DAL.Concrete.EntityFramework.Mapping
                 .WithRequired(a => a.Person)
                 .HasForeignKey(a => a.PersonID);
 
+           
+
 
 
 

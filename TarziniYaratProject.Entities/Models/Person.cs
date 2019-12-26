@@ -34,7 +34,7 @@ namespace TarziniYaratProject.Entities.Models
         public virtual ICollection<Combine> Combines { get; set; }
         public virtual ICollection<Address> Addresses { get; set; }
         public virtual ICollection<Like> Likes { get; set; }
-        public virtual Image Image { get; set; }
+       
     }
 
     public enum PersonType

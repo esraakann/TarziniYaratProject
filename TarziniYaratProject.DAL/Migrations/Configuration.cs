@@ -49,13 +49,6 @@
             person.Surname = "Karademir";
             person.IsActive = true;
             person.Username = "fatihk";
-            person.Image = new Image
-            {
-                ImageID = 3,
-                ImagePath = "fwemfwmfw",
-                ProductID = 0,
-                PersonID = 1
-            };
             person.Password = "12345";
             person.CellPhone = "4562523523523";
             person.PersonType = PersonType.Admin;
@@ -72,7 +65,6 @@
                 CellPhone = "1234567891011",
                 IsActive = true,
                 Username = "mstfa",
-                Image = new Image { ImageID = 4, ImagePath = "fwemfwmfw", ProductID = 0, PersonID = 2 },
                 Password = "sifre123",
                 PersonType = PersonType.Member,
                 Email = "mustafaakcakaya@gmail.com",
@@ -92,7 +84,7 @@
                     Description="Kumaşı yün",
                     Title="Beyaz V Yakalı Gömlek ",
                     Price=40,
-                    Images = new List<Image>(){ new Image { ImageID = 2, ImagePath = "dfgdfgd", ProductID = 1, PersonID = 0 } },
+                    Images = new List<Image>(){ new Image { ImageID = 2, ImagePath = "dfgdfgd", ProductID = 1} },
                     CreatedDate=DateTime.Now,
                     Discount=0,
                     ProductDetails=new List<ProductDetail>()
@@ -112,7 +104,7 @@
                     Price=80,
                      Images = new List<Image> ()
                      {
-                         new Image { ImageID = 1, ImagePath = "dgdfgdf", ProductID = 2, PersonID = 0}
+                         new Image { ImageID = 1, ImagePath = "dgdfgdf", ProductID = 2}
                      },
                     CreatedDate=DateTime.Now,
                     Discount=0 ,
@@ -133,7 +125,7 @@
                     Price=60,
                     CreatedDate=DateTime.Now,
                     Discount=0,
-                    Images = new List<Image>(){ new Image { ImageID = 5, ImagePath = "fwemfwmfw", ProductID = 3, PersonID = 0 } },
+                    Images = new List<Image>(){ new Image { ImageID = 5, ImagePath = "fwemfwmfw", ProductID = 3} },
                     ProductDetails=new List<ProductDetail>()
                     {
                        new ProductDetail{ ProductDetailID=3, Size="36", Color=ProductDetail.ProductColor.Siyah, Stock=3 }
@@ -159,56 +151,56 @@
 
             };
 
-            //List<Combine> combines = new List<Combine>()
-            //{
-            //    new Combine
-            //    {
-            //        CombineID = 1,
-            //        Description="Günlük tarz",
-            //        CombineImage = "imageyolu",
-            //        PersonID=2,
-            //        CommentCount=50,
-            //        Likes = new List<Like>(){ new Like { LikeID=1, PersonID=2, CombineID=1, ProductID=0, CommentID=0 } },
-            //        Comments = new List<Comment>(){ new Comment { CommentID=1, CommentDate=DateTime.Now, Content="Ooo çok güzel bir kombinmiş", PersonID=1,IsActive=true }, }
-            //    }
-            //};
+            List<Combine> combines = new List<Combine>()
+            {
+                new Combine
+                {
+                    CombineID = 1,
+                    Description="Günlük tarz",
+                    CombineImage = "imageyolu",
+                    PersonID=2,
+                    CommentCount=50,
+                    Likes = new List<Like>(),//{ new Like { LikeID=1, PersonID=2, CombineID=1, ProductID=0, CommentID=0 } },
+                    Comments = new List<Comment>()/*{ new Comment { CombineID=1,  ProductID= 0, CommentID=1, CommentDate=DateTime.Now, Content="Ooo çok güzel bir kombinmiş", PersonID=1,IsActive=true }, }*/
+                }
+            };
 
-            //Purchase purchase = new Purchase()
-            //{
-            //    PurchaseID = 1,
-            //    PersonID = 1,
-            //    TotalPrice = 140,
-            //    CargoStatusID = 1,
-            //    PurchaseDetails = new List<PurchaseDetail>()
-            //    {
-            //      new PurchaseDetail
-            //      {
-            //            PurchaseDetailID=1,
-            //            ProductID=2,
-            //            Count=1,
-            //            PurchaseID=1,
-            //            Price=80
-            //      },
-            //      new PurchaseDetail
-            //      {
-            //            PurchaseDetailID=2,
-            //            ProductID=3,
-            //            Count=1,
-            //            PurchaseID=1,
-            //            Price=60
-            //      }
+            Purchase purchase = new Purchase()
+            {
+                PurchaseID = 1,
+                PersonID = 1,
+                TotalPrice = 140,
+                CargoStatusID = 1,
+                PurchaseDetails = new List<PurchaseDetail>()
+                {
+                  new PurchaseDetail
+                  {
+                        PurchaseDetailID=1,
+                        ProductID=2,
+                        Count=1,
+                        PurchaseID=1,
+                        Price=80
+                  },
+                  new PurchaseDetail
+                  {
+                        PurchaseDetailID=2,
+                        ProductID=3,
+                        Count=1,
+                        PurchaseID=1,
+                        Price=60
+                  }
 
-            //    }
+                }
 
-            //};
+            };
             context.Brand.AddRange(brands);
             context.Category.AddRange(categories);
             context.CargoStatus.AddRange(cargoStatuses);
             context.Person.Add(person);
             context.Person.Add(person2);
-            //context.Product.AddRange(products);
-            //context.Combine.AddRange(combines);
-            //context.Purchase.Add(purchase);
+            context.Product.AddRange(products);
+            context.Combine.AddRange(combines);
+            context.Purchase.Add(purchase);
 
             context.SaveChanges();
 
