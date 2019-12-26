@@ -12,7 +12,8 @@ namespace TarziniYaratProject.DAL.Concrete.EntityFramework
     {
         protected override void Seed(TarziniYaratDBContext context)
         {
-            //TODO: Başlangıçta eklenmesi istenen yapılar buraya yazılabilir.
+            throw new Exception("Initilizer Seed");
+            
             List<Brand> brands = new List<Brand>()
             {
               new Brand { Name = "Nike",BrandID =1},
@@ -183,7 +184,17 @@ namespace TarziniYaratProject.DAL.Concrete.EntityFramework
                 }
 
             };
+            context.Brand.AddRange(brands);
+            context.Category.AddRange(categories);
+            context.CargoStatus.AddRange(cargoStatuses);
+            context.Person.Add(person);
+            context.Person.Add(person2);
+            context.Image.AddRange(images);
+            context.Product.AddRange(products);
+            context.Combine.AddRange(combines);
+            context.Purchase.Add(purchase);
 
+            context.SaveChanges();
 
             base.Seed(context);
         }

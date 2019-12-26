@@ -1,4 +1,4 @@
-﻿namespace TarziniYaratProject.DAL.Migrations
+﻿ namespace TarziniYaratProject.DAL.Migrations
 {
     using System;
     using System.Data.Entity.Migrations;
