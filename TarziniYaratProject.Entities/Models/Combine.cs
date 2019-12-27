@@ -18,7 +18,6 @@ namespace TarziniYaratProject.Entities.Models
         public string Description { get; set; }
         public string CombineImage { get; set; }
         public int PersonID { get; set; }
-        public int CommentCount { get; set; }
         public int LikeCount { get; set; }
 
         public virtual ICollection<Comment> Comments { get; set; }

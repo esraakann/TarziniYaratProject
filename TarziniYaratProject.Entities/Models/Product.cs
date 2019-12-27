@@ -26,6 +26,7 @@ namespace TarziniYaratProject.Entities.Models
         public DateTime CreatedDate { get; set; }
         public int CategoryID { get; set; }
         public int Gender { get; set; }
+        public int LikeCount { get; set; }
 
         public virtual Category Category { get; set; }
         public virtual Brand Brand { get; set; }

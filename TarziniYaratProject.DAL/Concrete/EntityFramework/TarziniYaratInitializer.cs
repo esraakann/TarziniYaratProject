@@ -4,6 +4,7 @@ using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TarziniYaratProject.Entities.Models;
 
 namespace TarziniYaratProject.DAL.Concrete.EntityFramework
 {
@@ -12,6 +13,7 @@ namespace TarziniYaratProject.DAL.Concrete.EntityFramework
         protected override void Seed(TarziniYaratDBContext context)
         {
             //TODO: Başlangıçta eklenmesi istenen yapılar buraya yazılabilir.
+            
             base.Seed(context);
         }
     }
