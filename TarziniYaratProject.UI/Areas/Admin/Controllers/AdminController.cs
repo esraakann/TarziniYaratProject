@@ -9,7 +9,11 @@ namespace TarziniYaratProject.UI.Areas.Admin.Controllers
 {
     public class AdminController : Controller
     {
-        
+        public ActionResult Index()
+        {
+            
+            return View();
+        }
         public ActionResult Login()
         {
             return View(new Person());
@@ -20,9 +24,5 @@ namespace TarziniYaratProject.UI.Areas.Admin.Controllers
             return View(p);
         }
 
-        public ActionResult Login2()
-        {
-            return View(new Person());
-        }
     }
 }
