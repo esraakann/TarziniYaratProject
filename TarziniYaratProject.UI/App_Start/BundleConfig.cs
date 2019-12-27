@@ -10,18 +10,26 @@ namespace TarziniYaratProject.UI.App_Start
     {
         public static void RegisterBundles(BundleCollection bundles)
         {
-            //bundles.Add(new StyleBundle("~/css/all").Include("~/Content/css/all.min.css", "~/Content/css/sb-admin-2.min.css"));
-            //BundleTable.EnableOptimizations = true;
+            bundles.Add(new StyleBundle("~/css/adminLayout").Include("~/Areas/Admin/Content/css/*.css"));
 
-            //bundles.Add(new ScriptBundle("~/js/all")
-            //   .Include("~/Content/js/*.js"));
-
-            //bundles.Add(new ScriptBundle("~/js/all")
-            //    .Include("~/Content/js/jquery.min.js",
-            //    "~/Content/js/bootstrap.bundle.min.js", "~/Content/js/jquery.easing.min.js", "~/Content/js/sb-admin-2.min.js"));
+            bundles.Add(new ScriptBundle("~/js/adminLayout").Include("~/Areas/Admin/Content/js/jquery.min.js", "~/Areas/Admin/Content/js/bootstrap.bundle.min.js", "~/Areas/Admin/Content/js/jquery.easing.min.js", "~/Areas/Admin/Content/js/sb-admin-2.min.js", "~/Areas/Admin/Content/js/Chart.min.js", "~/Areas/Admin/Content/js/chart-area-demo.js", "~/Areas/Admin/Content/js/chart-pie-demo.js"));
 
 
-            
+    //@*< script src = "~/Areas/Admin/Content/js/jquery.min.js" ></ script >
+ 
+    // < script src = "~/Areas/Admin/Content/js/bootstrap.bundle.min.js" ></ script >
+  
+    //  < script src = "~/Areas/Admin/Content/js/jquery.easing.min.js" ></ script >
+   
+    //   < script src = "~/Areas/Admin/Content/js/sb-admin-2.min.js" ></ script >
+    
+    //    < script src = "~/Areas/Admin/Content/js/Chart.min.js" ></ script >
+     
+    //     < script src = "~/Areas/Admin/Content/js/chart-area-demo.js" ></ script >
+      
+    //      < script src = "~/Areas/Admin/Content/js/chart-pie-demo.js" ></ script > *@
+
+                   BundleTable.EnableOptimizations = true;
         }
     }
 }

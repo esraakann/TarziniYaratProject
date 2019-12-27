@@ -9,13 +9,13 @@ using TarziniYaratProject.UI.App_Start;
 
 namespace TarziniYaratProject.UI
 {
-    public class MvcApplication : System.Web.HttpApplication
+    public class MvcApplication :HttpApplication
     {
         protected void Application_Start()
         {
             AreaRegistration.RegisterAllAreas();
             RouteConfig.RegisterRoutes(RouteTable.Routes);
-            //BundleConfig.RegisterBundles(BundleTable.Bundles); 
+            BundleConfig.RegisterBundles(BundleTable.Bundles); 
         }
     }
 }
