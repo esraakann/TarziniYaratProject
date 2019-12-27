@@ -26,6 +26,11 @@ namespace TarziniYaratProject.DAL.Concrete.EntityFramework.Mapping
                 .HasMaxLength(50)
                 .IsRequired();
 
+            Property(a => a.Gender)
+                .IsRequired()
+                .HasMaxLength(1)
+                .HasColumnType("char");
+
             Property(a => a.Price)
                 .HasColumnType("money");
         }
