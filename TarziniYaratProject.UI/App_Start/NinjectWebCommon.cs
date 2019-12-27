@@ -1,13 +1,14 @@
 ﻿using WebActivatorEx;
-
-[assembly: PreApplicationStartMethod(typeof(TarziniYaratProject.UI.App_Start.NinjectWebCommon), "Start")]
-[assembly: ApplicationShutdownMethodAttribute(typeof(TarziniYaratProject.UI.App_Start.NinjectWebCommon), "Stop")]
+using TarziniYaratProject.UI.App_Start;
+[assembly: PreApplicationStartMethod(typeof(NinjectWebCommon), "Start")]
+[assembly: ApplicationShutdownMethodAttribute(typeof(NinjectWebCommon), "Stop")]
 
 namespace TarziniYaratProject.UI.App_Start
 {
     using Microsoft.Web.Infrastructure.DynamicModuleHelper;
     using Ninject;
     using Ninject.Web.Common;
+    using Ninject.Web.Common.WebHost;
     using System;
     using System.Collections.Generic;
     using System.Linq;
