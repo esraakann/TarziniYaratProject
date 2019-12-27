@@ -7,7 +7,7 @@ using TarziniYaratProject.Entities.Models;
 
 namespace TarziniYaratProject.BLL.Abstract.EntityServices
 {
-    interface IPersonService : IBaseService<Person>
+    public interface IPersonService : IBaseService<Person>
     {
     }
 }

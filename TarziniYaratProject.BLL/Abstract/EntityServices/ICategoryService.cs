@@ -7,7 +7,7 @@ using TarziniYaratProject.Entities.Models;
 
 namespace TarziniYaratProject.BLL.Abstract.EntityServices
 {
-    interface ICategoryService : IBaseService<Category>
+    public interface ICategoryService : IBaseService<Category>
     {
     }
 }

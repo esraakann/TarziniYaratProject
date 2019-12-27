@@ -9,7 +9,7 @@ using TarziniYaratProject.Entities.Models;
 
 namespace TarziniYaratProject.BLL.Concrete
 {
-    class LikeService : ILikeService
+    public class LikeService : ILikeService
     {
         ILikeDAL _dal;
         public LikeService(ILikeDAL dal)

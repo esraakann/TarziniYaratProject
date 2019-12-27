@@ -7,7 +7,7 @@ using TarziniYaratProject.Entities.Models;
 
 namespace TarziniYaratProject.BLL.Abstract.EntityServices
 {
-    interface IPurchaseService : IBaseService<Purchase>
+    public interface IPurchaseService : IBaseService<Purchase>
     {
     }
 }

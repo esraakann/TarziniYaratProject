@@ -9,7 +9,7 @@ using TarziniYaratProject.Entities.Models;
 
 namespace TarziniYaratProject.BLL.Concrete
 {
-    class CategoryService : ICategoryService
+    public class CategoryService : ICategoryService
     {
         ICategoryDAL _dal;
         public CategoryService(ICategoryDAL dal)

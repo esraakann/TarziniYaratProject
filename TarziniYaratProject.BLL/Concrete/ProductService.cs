@@ -9,7 +9,7 @@ using TarziniYaratProject.Entities.Models;
 
 namespace TarziniYaratProject.BLL.Concrete
 {
-    class ProductService : IProductService
+    public class ProductService : IProductService
     {
         IProductDAL _dal;
         public ProductService(IProductDAL dal)

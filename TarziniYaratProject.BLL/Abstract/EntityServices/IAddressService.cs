@@ -7,7 +7,7 @@ using TarziniYaratProject.Entities.Models;
 
 namespace TarziniYaratProject.BLL.Abstract.EntityServices
 {
-    interface IAddressService:IBaseService<Address>
+    public interface IAddressService:IBaseService<Address>
     {
 
     }

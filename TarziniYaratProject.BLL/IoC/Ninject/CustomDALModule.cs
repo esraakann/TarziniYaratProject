@@ -9,7 +9,7 @@ using TarziniYaratProject.DAL.Concrete.EntityFramework.DAL;
 
 namespace TarziniYaratProject.BLL.IoC.Ninject
 {
-    class CustomDALModule : NinjectModule
+    public class CustomDALModule : NinjectModule
     {
         public override void Load()
         {

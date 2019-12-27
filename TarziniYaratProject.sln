@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28307.572
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29509.3
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TarziniYaratProject.Entities", "TarziniYaratProject.Entities\TarziniYaratProject.Entities.csproj", "{50831E10-88BA-4EDC-80FC-3CCF5CADFB05}"
 EndProject
@@ -42,6 +42,10 @@ Global
 		{6BC227B9-F60A-402C-B393-A111C6A4C244}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6BC227B9-F60A-402C-B393-A111C6A4C244}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6BC227B9-F60A-402C-B393-A111C6A4C244}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C7A629C0-0D4E-4B14-9468-C6177D40412C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C7A629C0-0D4E-4B14-9468-C6177D40412C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C7A629C0-0D4E-4B14-9468-C6177D40412C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C7A629C0-0D4E-4B14-9468-C6177D40412C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -9,7 +9,7 @@ using TarziniYaratProject.Entities.Models;
 
 namespace TarziniYaratProject.BLL.Concrete
 {
-    class CombineService : ICombineService
+    public  class CombineService : ICombineService
     {
         ICombineDAL _dal;
         public CombineService(ICombineDAL dal)

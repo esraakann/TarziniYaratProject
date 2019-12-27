@@ -9,7 +9,7 @@ using TarziniYaratProject.Entities.Models;
 
 namespace TarziniYaratProject.BLL.Concrete
 {
-    class BrandService : IBrandService
+    public class BrandService : IBrandService
     {
         IBrandDAL _dal;
         public BrandService(IBrandDAL dal)

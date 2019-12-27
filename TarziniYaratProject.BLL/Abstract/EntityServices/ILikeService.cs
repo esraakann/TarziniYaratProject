@@ -7,7 +7,7 @@ using TarziniYaratProject.Entities.Models;
 
 namespace TarziniYaratProject.BLL.Abstract.EntityServices
 {
-    interface ILikeService : IBaseService<Like>
+    public  interface ILikeService : IBaseService<Like>
     {
 
     }

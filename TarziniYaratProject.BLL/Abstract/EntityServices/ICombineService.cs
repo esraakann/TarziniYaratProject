@@ -7,7 +7,7 @@ using TarziniYaratProject.Entities.Models;
 
 namespace TarziniYaratProject.BLL.Abstract.EntityServices
 {
-    interface ICombineService : IBaseService<Combine>
+    public interface ICombineService : IBaseService<Combine>
     {
     }
 }

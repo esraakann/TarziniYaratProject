@@ -9,7 +9,7 @@ using TarziniYaratProject.Entities.Models;
 
 namespace TarziniYaratProject.BLL.Concrete
 {
-    class AddressService : IAddressService
+    public class AddressService : IAddressService
     {
         IAdressDAL _dal;
         public AddressService(IAdressDAL dal)

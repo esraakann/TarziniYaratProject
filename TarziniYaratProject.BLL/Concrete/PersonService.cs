@@ -9,7 +9,7 @@ using TarziniYaratProject.Entities.Models;
 
 namespace TarziniYaratProject.BLL.Concrete
 {
-    class PersonService : IPersonService
+    public class PersonService : IPersonService
     {
         IPersonDAL _dal;
         public PersonService(IPersonDAL dal)

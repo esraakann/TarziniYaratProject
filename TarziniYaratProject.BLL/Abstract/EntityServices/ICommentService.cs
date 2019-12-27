@@ -7,7 +7,7 @@ using TarziniYaratProject.Entities.Models;
 
 namespace TarziniYaratProject.BLL.Abstract.EntityServices
 {
-    interface ICommentService : IBaseService<Comment>
+    public interface ICommentService : IBaseService<Comment>
     {
     }
 }

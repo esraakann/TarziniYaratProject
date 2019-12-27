@@ -7,7 +7,7 @@ using TarziniYaratProject.Core.Entity;
 
 namespace TarziniYaratProject.BLL.Abstract
 {
-    interface IBaseService<T>
+    public interface IBaseService<T>
             where T : IEntity
     {
         void Insert(T entity);

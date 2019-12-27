@@ -9,7 +9,7 @@ using TarziniYaratProject.Entities.Models;
 
 namespace TarziniYaratProject.BLL.Concrete
 {
-    class CargoStatusService : ICargoStatusService
+    public  class CargoStatusService : ICargoStatusService
     {
         ICargoStatusDAL _dal;
         public CargoStatusService(ICargoStatusDAL dal)

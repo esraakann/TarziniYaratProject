@@ -7,7 +7,7 @@ using TarziniYaratProject.Entities.Models;
 
 namespace TarziniYaratProject.BLL.Abstract.EntityServices
 {
-    interface IBrandService : IBaseService<Brand>
+    public interface IBrandService : IBaseService<Brand>
     {
     }
 }

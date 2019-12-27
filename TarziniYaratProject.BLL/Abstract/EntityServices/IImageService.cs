@@ -7,7 +7,7 @@ using TarziniYaratProject.Entities.Models;
 
 namespace TarziniYaratProject.BLL.Abstract.EntityServices
 {
-    interface IImageService : IBaseService<Image>
+    public interface IImageService : IBaseService<Image>
     {
     }
 }

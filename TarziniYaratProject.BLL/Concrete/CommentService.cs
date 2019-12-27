@@ -9,7 +9,7 @@ using TarziniYaratProject.Entities.Models;
 
 namespace TarziniYaratProject.BLL.Concrete
 {
-    class CommentService : ICommentService
+    public  class CommentService : ICommentService
     {
         ICommentDAL _dal;
         public CommentService(ICommentDAL dal)

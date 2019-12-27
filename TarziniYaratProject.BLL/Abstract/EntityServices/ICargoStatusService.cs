@@ -7,7 +7,7 @@ using TarziniYaratProject.Entities.Models;
 
 namespace TarziniYaratProject.BLL.Abstract.EntityServices
 {
-    interface ICargoStatusService : IBaseService<CargoStatus>
+    public interface ICargoStatusService : IBaseService<CargoStatus>
     {
     }
 }
