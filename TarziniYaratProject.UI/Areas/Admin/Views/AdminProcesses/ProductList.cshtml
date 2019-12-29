@@ -60,7 +60,7 @@
                 <a href="#" class="btn btn-info btn-circle btn-xs ">
                     <i class="fas fa-info-circle"></i>
                 </a>
-                <a href="#" class="btn btn-danger btn-circle btn-xs">
+                <a href="#" class="btn btn-danger btn-circle btn-xs btnDelete" prod-id="@item.ProductID">
                     <i class="fas fa-trash"></i>
                 </a>
                 @*@Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }, new { @class = "" }) |
@@ -71,3 +71,27 @@
     }
 
 </table>
+
+@section scripts{
+    <script>
+        $(".btnDelete").click(function () {
+            var prodID = $(this).attr("prod-id");
+
+            $.ajax({
+                url: "/AdminProcesses/DeleteProduct/" + prodID,
+                type: "POST",
+                dataType: "json",
+                success: function (resp) {
+                    if (resp == "ok") {
+                        alert("Silme işlemi başarılı.")
+                        window.location.reload();
+                    }
+                    else {
+                        alert("Ürün bulunamadı.");
+                    }
+                }
+            });
+        });
+
+    </script>
+}
