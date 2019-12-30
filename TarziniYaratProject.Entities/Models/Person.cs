@@ -23,8 +23,7 @@ namespace TarziniYaratProject.Entities.Models
         public string Surname { get; set; }
         [Required(ErrorMessage ="Lütfen Kullanıcı Adınızı Giriniz.")]
         public string Username { get; set; }
-        [Required(ErrorMessage = "Lütfen Şifrenizi Giriniz.")]
-        [Range(6, 16, ErrorMessage = "Şifreniz 6-16 karakter aralığında olmalıdır.")]
+        [Required(ErrorMessage = "Lütfen Şifrenizi Giriniz."),MaxLength(16,ErrorMessage ="Şifreniz en fazla 16 karakter olmalıdır."), MinLength(6,ErrorMessage ="Şifreniz En az 6 karakter olmalıdır.")]
         public string Password { get; set; }
 
         public PersonType PersonType { get; set; }

@@ -9,6 +9,6 @@ namespace TarziniYaratProject.BLL.Abstract.EntityServices
 {
     public interface IPersonService : IBaseService<Person>
     {
-        bool AdminLogin(Person person);
+        Person AdminLogin(Person person);
     }
 }

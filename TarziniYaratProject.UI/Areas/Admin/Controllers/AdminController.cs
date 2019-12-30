@@ -6,6 +6,7 @@ using System.Web;
 using System.Web.Mvc;
 using TarziniYaratProject.BLL.Abstract.EntityServices;
 using TarziniYaratProject.Entities.Models;
+using TarziniYaratProject.UI.Models;
 
 namespace TarziniYaratProject.UI.Areas.Admin.Controllers
 {
@@ -25,36 +26,31 @@ namespace TarziniYaratProject.UI.Areas.Admin.Controllers
         }
         public ActionResult Login()
         {
-            return View(new Person());
+            ViewBag.Danger = null;
+            return View();
         }
 
         [HttpPost]
         public ActionResult Login(Person p)
         {
-            bool login = _personService.AdminLogin(p);
-            if (login)
+
+            Person login = _personService.AdminLogin(p);
+            if (login != null)
             {
-                if (p.Password.Length>=6 && p.Password.Length<=16)
-                {
-                    return RedirectToAction("ProductList", "AdminProcesses");
-                }
-                else
-                {
-                    TempData["passwordErrorMessage"] = "Şifreniz 6-16 karakter uzunluğunda olmalıdır.";
-                    return View();
-                }
-               
+                Session["PersonID"] = login.PersonID;
+                Session["Username"] = login.Username;
+                Session["Password"] = login.Password;
+
+                return RedirectToAction("ProductList", "AdminProcesses");
+
             }
 
             else
             {
-                TempData["errorMessage"] = "Kullanıcı Adı veya Şifrenizi Kontrol Ediniz.";
+                ViewBag.Danger = "Kullanıcı Adı veya Şifrenizi Kontrol Ediniz.";
                 return View();
             }
         }
-        public ActionResult example()
-        {
-            return View();
-        }
+
     }
 }
