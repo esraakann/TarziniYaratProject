@@ -54,7 +54,7 @@
                 @Html.DisplayFor(modelItem => item.Gender)
             </td>
             <td>
-                <a href="#" class="btn btn-success btn-circle btn-xs ">
+                <a href="#" class="btn btn-success btn-circle btn-xs btnUpdate" data-id=@item.ProductID>
                     <i class="fas fa-check"></i>
                 </a>
                 <a href="#" class="btn btn-info btn-circle btn-xs ">
@@ -71,9 +71,106 @@
     }
 
 </table>
+<div class="modal fade" id="ShowModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4>Ürünü Düzenle</h4>
+                <a href="#" class="close" data-dismiss="modal">&times;</a>
+            </div>
+            <div class="modal-body">
+                <form id="UpdateProduct">
+
+                    <div class="form-group">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+                            <input class="form-control" type="text" name="productTitle" id="prodTitle" placeholder="Ürünün Yeni Adını Giriniz." />
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+                            <input class="form-control" type="text" name="productDescription" id="prodDesc" placeholder="Ürünün Yeni Açıklaması Giriniz." />
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+                            <input class="form-control" type="number" name="productPrice" id="prodPrice" placeholder="Ürünün Yeni Fiyatını Giriniz." />
+                        </div>
+                    </div>
+
+                </form>
+                <div class="form-group">
+                    <button class="btn btn-success form-control" id="btnUpdateChanges" type="submit"><i class="glyphicon glyphicon-floppy-save" data-id="0">Kaydet</i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
 @section scripts{
     <script>
+        $("#btnUpdateChanges").click(function () {
+            var prodId = $(this).attr("data-id")
+
+            var prod = {
+                "Title": $("#prodTitle").val(),
+                "Description": $("#prodDesc").val(),
+                "Price": $("#prodPrice").val(),
+                "ProductID": prodId
+            }
+
+            $.ajax({
+                url: "/AdminProcesses/UpdateProduct",
+                type: "POST",
+                data: prod,
+                success: function (resp) {
+                    if (resp == "ok") {
+                        alert("kayıt işlemi başarılı")
+                        window.location.reload();
+                    }
+                    else {
+                        alert("Kayıt işlemi başarısız.")
+                        console.log(resp);
+                    }
+                },
+                onerror: function (err) {
+                    alert("İstek başarısız")
+                    console.log(err);
+                }
+            })
+
+        })
+
+
+        $(".btnUpdate").click(function () {
+            $("#ShowModal").modal();
+            var prodID = $(this).attr("data-id")
+            $.ajax({
+                url: "/AdminProcesses/GetProduct/" + prodID,
+                type: "GET",
+                dataType: "json",
+                success: function (data) {
+                    if (data != null) {
+                        $("#prodTitle").val(data.Title);
+                        $("#prodDesc").val(data.Description);
+                        $("#prodPrice").val(data.Price);
+                        $("#btnUpdateChanges").attr("data-id", data.Id);
+                    }
+                },
+                onerror: function (err) {
+                    alert("Hata oluştu. Geliştirici detayları için Console'a bakınız.")
+                    console.log(err);
+                }
+            });
+        });
+
+
+
+
         $(".btnDelete").click(function () {
             var prodID = $(this).attr("prod-id");
 
@@ -89,6 +186,10 @@
                     else {
                         alert("Ürün bulunamadı.");
                     }
+                },
+                onerror: function (err) {
+                    alert("Hata oluştu. Geliştirici detayları için Console'a bakınız.")
+                    console.log(err);
                 }
             });
         });
