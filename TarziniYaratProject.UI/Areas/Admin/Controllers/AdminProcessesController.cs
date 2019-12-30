@@ -20,6 +20,13 @@ namespace TarziniYaratProject.UI.Areas.Admin.Controllers
         {
             return View(_productService.GetAll());
         }
+        public JsonResult DeleteProduct(int id)
+        {
+            Product cat = _productService.Get(id);
+            _productService.Delete(cat);
+            //_context.SaveChanges();
+            return Json("ok", JsonRequestBehavior.AllowGet);
+        }
 
     }
 }

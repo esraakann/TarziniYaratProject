@@ -14,7 +14,7 @@ namespace TarziniYaratProject.DAL.Concrete.EntityFramework
     {
         //@"Server=DESKTOP-781S50N\MSSQLSERVER2; Database = TarziniYaratDb; uid=sa; pwd = 123" ESRA
         //
-        public TarziniYaratDBContext() : base(@"Server=EMRE\SQLEXPRESS; Database = TarziniYaratDb; uid=sa; pwd = 123")
+        public TarziniYaratDBContext() : base("Server=.; Database = TarziniYaratDb; uid=sa; pwd = 123")
         {
 
         }
