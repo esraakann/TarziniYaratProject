@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -20,7 +21,10 @@ namespace TarziniYaratProject.Entities.Models
         public int PersonID { get; set; }
         public string FirstName { get; set; }
         public string Surname { get; set; }
+        [Required(ErrorMessage ="Lütfen Kullanıcı Adınızı Giriniz.")]
         public string Username { get; set; }
+        [Required(ErrorMessage = "Lütfen Şifrenizi Giriniz.")]
+        [Range(6, 16, ErrorMessage = "Şifreniz 6-16 karakter aralığında olmalıdır.")]
         public string Password { get; set; }
 
         public PersonType PersonType { get; set; }

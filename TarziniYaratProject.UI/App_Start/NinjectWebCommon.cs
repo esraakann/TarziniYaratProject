@@ -1,7 +1,7 @@
 ﻿using WebActivatorEx;
 using TarziniYaratProject.UI.App_Start;
 [assembly: PreApplicationStartMethod(typeof(NinjectWebCommon), "Start")]
-[assembly: ApplicationShutdownMethodAttribute(typeof(NinjectWebCommon), "Stop")]
+[assembly: ApplicationShutdownMethod(typeof(NinjectWebCommon), "Stop")]
 
 namespace TarziniYaratProject.UI.App_Start
 {

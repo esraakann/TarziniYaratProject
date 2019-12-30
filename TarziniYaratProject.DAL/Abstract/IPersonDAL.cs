@@ -10,5 +10,7 @@ namespace TarziniYaratProject.DAL.Abstract
 {
     public interface IPersonDAL : IEntityRepository<Person>
     {
+       
+
     }
 }

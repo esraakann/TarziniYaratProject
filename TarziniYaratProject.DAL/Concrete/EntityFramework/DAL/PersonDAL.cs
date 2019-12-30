@@ -9,7 +9,11 @@ using TarziniYaratProject.Entities.Models;
 
 namespace TarziniYaratProject.DAL.Concrete.EntityFramework.DAL
 {
-    public class PersonDAL : EFRepositoryBase<Person, TarziniYaratDBContext>,IPersonDAL
+    public class PersonDAL : EFRepositoryBase<Person, TarziniYaratDBContext>, IPersonDAL
     {
+        public PersonDAL()
+        {
+           
+        }
     }
 }

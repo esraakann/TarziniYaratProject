@@ -45,5 +45,35 @@ namespace TarziniYaratProject.BLL.Concrete
         {
             _dal.Add(entity);
         }
+
+        public bool AdminLogin(Person entity)
+        {
+            if (entity != null)
+            {
+                Person login = _dal.Get(x => x.Username == entity.Username && x.Password == entity.Password);
+                //string adminUsername = _dal.Get(x => x.Username == entity.Username && x.Password == entity.Password).Username;
+                //string adminPassword = _dal.Get(x => x.Username == entity.Username && x.Password == entity.Password).Password;
+             
+                if (login!=null)
+                {
+                    if (login.PersonType==PersonType.Admin)
+                    {
+                        if (login.IsActive==true)
+                        {
+                                return true;
+                        }
+                        else
+                        {
+                            return false;
+                        }
+                    }
+                    else
+                    {
+                        return false;
+                    }
+                }
+            }
+            return false;
+        }
     }
 }

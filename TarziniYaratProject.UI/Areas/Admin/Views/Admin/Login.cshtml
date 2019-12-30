@@ -1,12 +1,8 @@
-﻿ @*@using System.Web.Optimization*@
+﻿@*@using System.Web.Optimization*@
 @model Person
 @{
     Layout = null;
-
 }
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -38,11 +34,12 @@
                                     {
                                         <form class="user">
                                             <div class="form-group">
-                                                @Html.TextBoxFor(model => model.Email, new { @class = "form-control form-control-user", @placeholder = "Email Adresinizi Giriniz..." })
-
+                                                @Html.TextBoxFor(model => model.Username, new { @class = "form-control form-control-user", @placeholder = "Kullanıcı Adınızı Giriniz..." })
+                                                @Html.ValidationMessageFor(model => model.Username, "", new { @class = "text-danger" })
                                             </div>
                                             <div class="form-group">
                                                 @Html.TextBoxFor(model => model.Password, new { @class = "form-control form-control-user", @placeholder = "Şifrenizi Giriniz..." })
+                                                @Html.ValidationMessageFor(model => model.Password, "", new { @class = "text-danger" })
                                             </div>
                                             <!--Beni hatırla checkbox-->
                                             <div class="form-group">
@@ -53,17 +50,17 @@
                                             </div>
                                             <div class="form-group">
                                                 <div class="custom-control custom-checkbox small">
-                                                    <input type="submit" value="Giriş Yap" class="btn btn-primary btn-user btn-block"/>
+                                                    <input type="submit" value="Giriş Yap" class="btn btn-primary btn-user btn-block" />
                                                 </div>
                                             </div>
 
-                                            @*<hr>*@
-                                            @*<a href="index.html" class="btn btn-google btn-user btn-block">
-                                                    <i class="fab fa-google fa-fw"></i> Login with Google
-                                                </a>
-                                                <a href="index.html" class="btn btn-facebook btn-user btn-block">
-                                                    <i class="fab fa-facebook-f fa-fw"></i> Login with Facebook
-                                                </a>*@
+                                            @if (TempData["errorMessage"] != null)
+                                            {
+                                                <div class="alert alert-warning">
+                                                    <button style="padding-right:15px;" type="button" class="close" data-dismiss="alert">&times;</button>
+                                                    <strong>Uyarı!</strong>@TempData["errorMessage"]<br>
+                                                </div>
+                                            }
                                         </form>
                                     }
                                     <hr>
@@ -86,7 +83,10 @@
 
     @*@Scripts.Render("~/js/all")*@
 
-
+    @section scripts
+    {
+       
+    }
 
 </body>
 </html>
