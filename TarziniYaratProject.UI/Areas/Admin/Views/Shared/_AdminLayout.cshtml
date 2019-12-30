@@ -56,6 +56,7 @@
                         <a class="collapse-item" href="buttons.html">Ürünler</a>
                         <a class="collapse-item" href="cards.html">Kategoriler</a>
                         <a class="collapse-item" href="cards.html">Markalar</a>
+                        <a class="collapse-item" href="~/Areas/Admin/Views/AdminProcesses/UserList.cshtml">Kullanıcılar</a>
                     </div>
                 </div>
             </li>
@@ -122,10 +123,11 @@
             <li><hr class="sidebar-divider d-none d-md-block"></li>
             <!-- Sidebar Toggler (Sidebar) -->
 
-            <div class="text-center d-none d-md-inline">
-                <button class="rounded-circle border-0" id="sidebarToggle"></button>
-            </div>
-
+            <li>
+                <div class="text-center d-none d-md-inline">
+                    <button class="rounded-circle border-0" id="sidebarToggle"></button>
+                </div>
+            </li>
         </ul>
         <!-- End of Sidebar -->
         <!-- Content Wrapper -->
@@ -226,7 +228,7 @@
                     <a class="btn btn-primary" href="login.html">Logout</a>
                 </div>
             </div>
-        </div>
+        </div
     </div>
     @Scripts.Render("~/js/adminLayout")
     @RenderSection("scripts", false)

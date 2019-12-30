@@ -1736,6 +1736,10 @@
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Areas\Admin\Views\Admin\Index.cshtml" />
     <Content Include="Areas\Admin\Views\AdminProcesses\ProductList.cshtml" />
+    <Content Include="Areas\Admin\Views\AdminProcesses\CreateProduct.cshtml" />
+    <Content Include="Areas\Admin\Views\AdminProcesses\CategoryList.cshtml" />
+    <Content Include="Areas\Admin\Views\AdminProcesses\CreateCategory.cshtml" />
+    <Content Include="Areas\Admin\Views\AdminProcesses\UpdateCategory.cshtml" />
     <None Include="Scripts\jquery-1.10.2-vsdoc.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -1754,6 +1758,7 @@
     <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
     <Compile Include="Areas\Admin\Controllers\AdminController.cs" />
     <Compile Include="Areas\Admin\Controllers\AdminProcessesController.cs" />
+    <Compile Include="Areas\Admin\Models\Genders.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -1924,7 +1929,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Areas\Admin\Models\" />
     <Folder Include="Controllers\" />
   </ItemGroup>
   <ItemGroup>

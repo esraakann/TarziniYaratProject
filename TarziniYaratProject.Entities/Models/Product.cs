@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -20,9 +21,14 @@ namespace TarziniYaratProject.Entities.Models
 
         public int ProductID { get; set; }
         public int BrandID { get; set; }
+        [Required(ErrorMessage ="Lütfen açıklamayı boş geçmeyiniz")]
         public string Description { get; set; }
+        [Required(ErrorMessage = "Lütfen başlığı boş geçmeyiniz")]
         public string Title { get; set; }
+        [Required(ErrorMessage = "Lütfen fiyatı boş geçmeyiniz")]
+        [RegularExpression(@"^\$?\d+(\.(\d{2}))?$")]
         public decimal Price { get; set; }
+        [RegularExpression(@"^\$?\d+(\.(\d{2}))?$")]
         public int Discount { get; set; }
         public DateTime CreatedDate { get; set; }
         public int CategoryID { get; set; }

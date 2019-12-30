@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 using TarziniYaratProject.BLL.Abstract.EntityServices;
+using TarziniYaratProject.Core.Entity;
 using TarziniYaratProject.DAL.Abstract;
 using TarziniYaratProject.Entities.Models;
 
@@ -36,6 +38,21 @@ namespace TarziniYaratProject.BLL.Concrete
             return _dal.GetAll();
         }
 
+
+
+        public ICollection<Product> GetProductsByCatID(int catID)
+        {
+            if (catID == 0)
+            {
+                return GetAll();
+            }
+            else
+            {
+                return _dal.GetAll(a => a.CategoryID == catID);
+            }
+
+        }
+
         public void Insert(Product entity)
         {
             _dal.Add(entity);
@@ -43,7 +60,9 @@ namespace TarziniYaratProject.BLL.Concrete
 
         public void Update(Product entity)
         {
-            _dal.Add(entity);
+            _dal.Update(entity);
         }
+
+
     }
 }
