@@ -1740,6 +1740,8 @@
     <Content Include="Areas\Admin\Views\AdminProcesses\CategoryList.cshtml" />
     <Content Include="Areas\Admin\Views\AdminProcesses\CreateCategory.cshtml" />
     <Content Include="Areas\Admin\Views\AdminProcesses\UpdateCategory.cshtml" />
+    <Content Include="Areas\Admin\Views\AdminProcesses\BrandList.cshtml" />
+    <Content Include="Areas\Admin\Views\AdminProcesses\CreateBrand.cshtml" />
     <None Include="Scripts\jquery-1.10.2-vsdoc.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />

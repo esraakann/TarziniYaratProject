@@ -53,6 +53,20 @@ namespace TarziniYaratProject.BLL.Concrete
 
         }
 
+        public ICollection<Product> GetProductsByBrandID(int brandID)
+        {
+            if (brandID == 0)
+            {
+                return GetAll();
+            }
+            else
+            {
+                return _dal.GetAll(a => a.BrandID == brandID);
+            }
+
+        }
+
+
         public void Insert(Product entity)
         {
             _dal.Add(entity);

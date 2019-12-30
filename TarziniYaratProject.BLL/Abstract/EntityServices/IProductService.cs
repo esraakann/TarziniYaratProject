@@ -10,5 +10,6 @@ namespace TarziniYaratProject.BLL.Abstract.EntityServices
     public interface IProductService : IBaseService<Product>
     {
        ICollection<Product> GetProductsByCatID(int catID);
+        ICollection<Product> GetProductsByBrandID(int brandID);
     }
 }
