@@ -11,13 +11,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TarziniYaratProject.DAL", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TarziniYaratProject.BLL", "TarziniYaratProject.BLL\TarziniYaratProject.BLL.csproj", "{6BC227B9-F60A-402C-B393-A111C6A4C244}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Images", "Images", "{B6D5A284-56F9-461D-B621-2478F96EC446}"
-	ProjectSection(SolutionItems) = preProject
-		Images\ceket1.jpg = Images\ceket1.jpg
-		Images\gomlek1.jpg = Images\gomlek1.jpg
-		Images\pantolon1.jpeg = Images\pantolon1.jpeg
-	EndProjectSection
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TarziniYaratProject.UI", "TarziniYaratProject.UI\TarziniYaratProject.UI.csproj", "{C7A629C0-0D4E-4B14-9468-C6177D40412C}"
 EndProject
 Global

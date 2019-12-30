@@ -14,8 +14,9 @@ namespace TarziniYaratProject.UI.Areas.Admin.Controllers
         IProductService _productService;
         ICategoryService _categoryService;
         IBrandService _brandService;
+        IPersonService _personService;
 
-        public AdminProcessesController(IProductService productService, ICategoryService categoryService, IBrandService brandService)
+        public AdminProcessesController(IProductService productService, ICategoryService categoryService, IBrandService brandService, IPersonService personService)
         {
             _productService = productService;
             _categoryService = categoryService;
