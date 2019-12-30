@@ -43,7 +43,7 @@ namespace TarziniYaratProject.BLL.Concrete
 
         public void Update(Person entity)
         {
-            _dal.Add(entity);
+            _dal.Update(entity);
         }
     }
 }

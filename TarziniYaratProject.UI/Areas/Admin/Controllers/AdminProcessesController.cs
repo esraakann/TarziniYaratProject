@@ -11,9 +11,11 @@ namespace TarziniYaratProject.UI.Areas.Admin.Controllers
     public class AdminProcessesController : Controller
     {
         IProductService _productService;
-        public AdminProcessesController(IProductService productService)
+        IPersonService _personService;
+        public AdminProcessesController(IProductService productService,IPersonService personService)
         {
             _productService = productService;
+            _personService = personService;
         }
         // GET: Admin/AdminProcesses
         public ActionResult ProductList()
@@ -25,6 +27,24 @@ namespace TarziniYaratProject.UI.Areas.Admin.Controllers
             Product cat = _productService.Get(id);
             _productService.Delete(cat);
             //_context.SaveChanges();
+            return Json("ok", JsonRequestBehavior.AllowGet);
+        }
+        public ActionResult UserList()
+        {
+            return View(_personService.GetAll());
+        }
+        public JsonResult UpdatePerson(int id)
+        {
+            Person person = _personService.Get(id);
+            if (person.IsActive == true)
+            {
+                person.IsActive = false;
+            }
+            else
+            {
+                person.IsActive = true;
+            }
+            _personService.Update(person);
             return Json("ok", JsonRequestBehavior.AllowGet);
         }
 

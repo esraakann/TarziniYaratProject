@@ -1,0 +1,107 @@
+﻿@model IEnumerable<TarziniYaratProject.Entities.Models.Person>
+
+@{
+    ViewBag.Title = "UserList";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Kullanıcı İşlemleri</h2>
+<a href="#" class="btn btn-success btn-icon-split" style="margin-bottom:20px">
+    <span class="icon text-white-50">
+        <i class="fas fa-check"></i>
+    </span>
+</a>
+
+@*<p>
+        @Html.ActionLink("Create New", "Create")
+    </p>*@
+<table class="table">
+    <tr>
+        <th>
+            Ad
+        </th>
+        <th>
+            Soyad
+        </th>
+        <th>
+            Kullanıcı Ad
+        </th>
+        <th>
+            Aktiflik Durumu
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (Person item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.FirstName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Surname)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Username)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IsActive)
+            </td>
+            <td>
+                @*<a href="#" class="btn btn-success btn-circle btn-xs btnAktif">
+                    <i class="fas fa-check"></i>
+                </a>*@
+                <a href="#" class="btn btn- btn-circle btn-xs btnPasif" person-id="@item.PersonID">
+                    <i class="fas fa-redo"></i>
+                </a>
+
+                @*@Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+                    @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+                    @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })*@
+            </td>
+        </tr>
+    }
+</table>
+
+@section scripts{
+    <script>
+        $(".btnPasif").click(function () {
+            var personID = $(this).attr("person-id");
+
+            $.ajax({
+                url: "/AdminProcesses/UpdatePerson/" + personID,
+                type: "POST",
+                dataType: "json",
+                success: function (resp) {
+                    if (resp == "ok") {
+                        alert("İşlem gerçekleştrildi")
+                        window.location.reload();
+                    }
+                    else {
+                        alert("İşlem gerçekleştirilemedi");
+                    }
+                }
+            });
+        });
+
+        // $(".btnAktif").click(function () {
+        //    var personID = $(this).attr("person-id");
+
+        //    $.ajax({
+        //        url: "/AdminProcesses/UpdatePerson/" + personID,
+        //        type: "POST",
+        //        dataType: "json",
+        //        success: function (resp) {
+        //            if (resp == "ok") {
+        //                alert("Kullanıcı aktifleştirildi.")
+        //                window.location.reload();
+        //            }
+        //            else {
+        //                alert("Kullanıcı hala pasif durumda.");
+        //            }
+        //        }
+        //    });
+        //});
+
+    </script>
+}

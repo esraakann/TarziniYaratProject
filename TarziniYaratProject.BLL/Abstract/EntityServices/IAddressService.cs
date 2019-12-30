@@ -9,6 +9,5 @@ namespace TarziniYaratProject.BLL.Abstract.EntityServices
 {
     public interface IAddressService:IBaseService<Address>
     {
-
     }
 }
