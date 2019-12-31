@@ -11,9 +11,11 @@ namespace TarziniYaratProject.UI.Controllers
     {
         // GET: Home
         IProductService _productService;
-        public HomeController(IProductService productService)
+        ICategoryService _categoryService;
+        public HomeController(IProductService productService,ICategoryService categoryService)
         {
             _productService = productService;
+            _categoryService = categoryService;
         }
         public ActionResult Index()
         {
@@ -23,9 +25,10 @@ namespace TarziniYaratProject.UI.Controllers
         {
             return View();
         }
-        public ActionResult Products()
+        public ActionResult Products(int catID= 0)
         {
-            return View(_productService.GetAll().ToList());
+            ViewBag.Categories = _categoryService.GetAll().ToList();
+            return View(_productService.GetProductsByCatID(catID));
         }
         public ActionResult Contact()
         {
