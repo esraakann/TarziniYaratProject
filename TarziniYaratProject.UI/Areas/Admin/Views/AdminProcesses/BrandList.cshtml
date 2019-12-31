@@ -1,0 +1,145 @@
+﻿@model IEnumerable<TarziniYaratProject.Entities.Models.Brand>
+
+@{
+    ViewBag.Title = "BrandList";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<a href="/Admin/AdminProcesses/CreateBrand" class="btn btn-success btn-icon-split" style="margin-bottom:20px">
+    <span class="icon text-white-50">
+        <i class="fas fa-plus"></i>
+    </span>
+    <span class="text">Yeni Marka</span>
+</a>
+<table class="table">
+    <tr>
+        <th>
+            Marka Adı
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name, new { @class = "btnName" })
+            </td>
+            <td>
+                <a href="#" class="btn btn-success btn-circle btn-xs btnUpdate" data-id=@item.BrandID>
+                    <i class="fas fa-check"></i>
+                </a>
+                <button href="#" class="btn btn-danger btn-circle btn-xs btnDelete" data-brandID="@item.BrandID">
+                    <i class="fas fa-trash"></i>
+                </button>
+                @Html.ActionLink("Ürünlerine Git", "ProductList", new { brandID = item.BrandID }, new { @class = "btn btn-success" })
+            </td>
+        </tr>
+    }
+
+</table>
+<div class="modal fade" id="ShowModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4>Marka Düzenle</h4>
+                <a href="#" class="close" data-dismiss="modal">&times;</a>
+            </div>
+            <div class="modal-body">
+                <form id="UpdateBrand">
+
+                    <div class="form-group">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+                            <input class="form-control" type="text" name="brandName" id="brandName" placeholder="Markanın Yeni Adını Giriniz." />
+                        </div>
+                    </div>
+                </form>
+                <div class="form-group">
+                    <button class="btn btn-success form-control" id="btnUpdateChanges" type="submit"><i class="glyphicon glyphicon-floppy-save" data-id="0">Kaydet</i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section scripts
+    {
+    <script>
+        $("#btnUpdateChanges").click(function () {
+            var brandId = $(this).attr("data-id");
+
+            var brand = {
+                "Name": $("#brandName").val(),
+                "BrandID": brandId,
+            }
+
+            $.ajax({
+                url: "/AdminProcesses/UpdateBrand/",
+                type: "POST",
+                data: brand,
+                success: function (resp)
+                {
+                    if (resp == "ok") {
+                        alert("Güncelleme Başarılı")
+                        window.location.reload();
+                    }
+                    else {
+                        alert("Güncelleme Başarısız")
+                        console.log(resp);
+                    }
+                },
+                onerror: function (err) {
+                    alert("İstek başarısız.")
+                    console.log(err);
+                }
+            })
+        })
+        
+        $(".btnUpdate").click(function () {
+            $("#ShowModal").modal();
+            var brandId = $(this).attr("data-id");
+
+            $.ajax({
+                url: "/AdminProcesses/GetBrand/" + brandId,
+                type: "GET",
+                dataType:"json",
+                success: function (resp) {
+                    if (resp != null) {
+                        $("#brandName").val(resp.Name);
+                        $("#btnUpdateChanges").attr("data-id", brandId);
+                    }
+                },
+                onerror: function (err) {
+                    alert("Hata Oluştu.Geliştirici Ayarları İçin Console'a bakınız.")
+                    console.log(err);
+                }
+            })
+        })
+
+
+        $(".btnDelete").click(function(){
+            var brandId = $(this).attr("data-brandID");
+
+            $.ajax({
+                url: "/AdminProcesses/DeleteBrand/" + brandId,
+                type: "POST",
+                dataType: "json",
+                success: function (resp) {
+                    if (resp == "ok") {
+                        alert("Silme İşlemi Başarılı");
+                        window.location.reload();
+                    }
+                    else {
+                        alert("Silme İşlemi Başarısız");
+                    }
+                },
+                onerror: function (err) {
+                    alert("Hata Oluştu.Geliştirici Ayarları İçin Console'a bakınız.");
+                    console.log(err);
+                }
+            });
+        });
+    </script>
+  
+}

@@ -12,7 +12,7 @@ namespace TarziniYaratProject.Entities.Models
         public int ImageID { get; set; }
         public string ImagePath { get; set; }
         public int ProductID { get; set; }
-    
+        public bool IsActive { get; set; }
 
      
         public virtual Product Product { get; set; }

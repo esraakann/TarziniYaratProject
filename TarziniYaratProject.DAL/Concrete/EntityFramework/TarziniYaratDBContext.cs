@@ -34,6 +34,7 @@ namespace TarziniYaratProject.DAL.Concrete.EntityFramework
         public DbSet<Purchase> Purchase { get; set; }
         public DbSet<PurchaseDetail> PurchaseDetails { get; set; }
         public DbSet<Like> Like { get; set; }
+        public DbSet<SliderImage> SliderImage { get; set; }
         #endregion
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)

@@ -52,5 +52,11 @@ namespace TarziniYaratProject.UI.Areas.Admin.Controllers
             }
         }
 
+        public ActionResult LogOut()
+        {
+            Session.Abandon();
+            return RedirectToAction("Login");
+        }
+
     }
 }
