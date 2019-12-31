@@ -271,7 +271,6 @@ namespace TarziniYaratProject.UI.Areas.Admin.Controllers
                 return Json(ex.Message, JsonRequestBehavior.AllowGet);
             }
             return Json("ok", JsonRequestBehavior.AllowGet);
-
         }
 
     }
