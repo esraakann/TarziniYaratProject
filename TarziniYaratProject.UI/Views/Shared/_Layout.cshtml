@@ -2,11 +2,11 @@
 
 <html>
 <head>
-    <title>Home</title>
+    <title>asdsadhaskhdas</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    @*<img src="~/images/icons/favicon.png" />*@
+    <img src="~/images/icons/favicon.png" />
     <!--===============================================================================================-->
     <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
     <link href="~/Content/font-awesome.min.css" rel="stylesheet" />
@@ -28,7 +28,6 @@
 <body>
     <!-- Header -->
     <header class="header1">
-        <!-- Header desktop -->
         <div class="container-menu-header">
             <div class="topbar">
                 <div class="topbar-social">
@@ -59,7 +58,7 @@
 
             <div class="wrap_header">
                 <!-- Logo -->
-                <a href="index.html" class="logo">
+                <a href="Index" class="logo">
                     <img src="~/images/icons/logo.png" alt="IMG-LOGO">
                 </a>
 
@@ -68,36 +67,31 @@
                     <nav class="menu">
                         <ul class="main_menu">
                             <li>
-                                <a href="index.html">Home</a>
-                                <ul class="sub_menu">
-                                    <li><a href="index.html">Homepage V1</a></li>
-                                    <li><a href="home-02.html">Homepage V2</a></li>
-                                    <li><a href="home-03.html">Homepage V3</a></li>
-                                </ul>
+                                <a href="Index">Anasayfa</a>
                             </li>
 
                             <li>
-                                <a href="product.html">Shop</a>
+                                <a href="About">Hakkımızda</a>
+                            </li>
+                            <li>
+                                <a href="product.html">Ürünler</a>
                             </li>
 
-                            <li class="sale-noti">
+                            @*<li class="sale-noti">
                                 <a href="product.html">Sale</a>
-                            </li>
+                            </li>*@
 
-                            <li>
+                            @*<li>
                                 <a href="cart.html">Features</a>
-                            </li>
+                            </li>*@
 
                             <li>
                                 <a href="blog.html">Blog</a>
                             </li>
 
-                            <li>
-                                <a href="about.html">About</a>
-                            </li>
 
                             <li>
-                                <a href="contact.html">Contact</a>
+                                <a href="Contact">İletişim</a>
                             </li>
                         </ul>
                     </nav>
@@ -332,37 +326,34 @@
                     </li>
 
                     <li class="item-menu-mobile">
-                        <a href="index.html">Home</a>
-                        <ul class="sub-menu">
-                            <li><a href="index.html">Homepage V1</a></li>
-                            <li><a href="home-02.html">Homepage V2</a></li>
-                            <li><a href="home-03.html">Homepage V3</a></li>
-                        </ul>
+                        <a href="index.html">Anasayfa</a>
+                        @*<ul class="sub-menu">
+                                <li><a href="index.html">Homepage V1</a></li>
+                                <li><a href="home-02.html">Homepage V2</a></li>
+                                <li><a href="home-03.html">Homepage V3</a></li>
+                            </ul>*@
                         <i class="arrow-main-menu fa fa-angle-right" aria-hidden="true"></i>
                     </li>
-
                     <li class="item-menu-mobile">
-                        <a href="product.html">Shop</a>
+                        <a href="about.html">Hakkımızda</a>
+                    </li>
+                    <li class="item-menu-mobile">
+                        <a href="product.html">Ürünler</a>
                     </li>
 
                     <li class="item-menu-mobile">
-                        <a href="product.html">Sale</a>
-                    </li>
-
-                    <li class="item-menu-mobile">
-                        <a href="cart.html">Features</a>
-                    </li>
+                            <a href="product.html">Sale</a>
+                        </li>
 
                     <li class="item-menu-mobile">
                         <a href="blog.html">Blog</a>
                     </li>
-
                     <li class="item-menu-mobile">
-                        <a href="about.html">About</a>
+                        <a href="cart.html">Kombinler</a>
                     </li>
 
                     <li class="item-menu-mobile">
-                        <a href="contact.html">Contact</a>
+                        <a href="contact.html">İletişim</a>
                     </li>
                 </ul>
             </nav>
@@ -557,23 +548,23 @@
 
 
     <!--===============================================================================================-->
-
     <script src="~/Scripts/jquery-3.2.1.min.js"></script>
     <script src="~/Scripts/animsition.min.js"></script>
     <script src="~/Scripts/popper.js"></script>
     <script src="~/Scripts/bootstrap.min.js"></script>
     <script src="~/Scripts/select2.min.js"></script>
+
+    <script src="~/Scripts/slick.min.js"></script>
+    <script src="~/Scripts/slick-custom.js"></script>
+    <script src="~/Scripts/countdowntime.js"></script>
+    <script src="~/Scripts/lightbox.min.js"></script>
+    <script src="~/Scripts/sweetalert.min.js"></script>
     <script type="text/javascript">
         $(".selection-1").select2({
             minimumResultsForSearch: 20,
             dropdownParent: $('#dropDownSelect1')
         });
     </script>
-    <script src="~/Scripts/slick.min.js"></script>
-    <script src="~/Scripts/slick-custom.js"></script>
-    <script src="~/Scripts/countdowntime.js"></script>
-    <script src="~/Scripts/lightbox.min.js"></script>
-    <script src="~/Scripts/sweetalert.min.js"></script>
     <script type="text/javascript">
         $('.block2-btn-addcart').each(function () {
             var nameProduct = $(this).parent().parent().parent().find('.block2-name').html();

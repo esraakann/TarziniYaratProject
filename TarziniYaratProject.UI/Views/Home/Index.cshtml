@@ -4,13 +4,17 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Index</h2>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
 
 <!-- Slide1 -->
 <section class="slide1">
     <div class="wrap-slick1">
         <div class="slick1">
-            <div class="item-slick1 item1-slick1" style="background-image: url(images/master-slide-02.jpg);">
+            <div class="item-slick1 item1-slick1" style="background-image: url(~/images/master-slide-02.jpg);">
                 <div class="wrap-content-slide1 sizefull flex-col-c-m p-l-15 p-r-15 p-t-150 p-b-170">
                     <span class="caption1-slide1 m-text1 t-center animated visible-false m-b-15" data-appear="fadeInDown">
                         Women Collection 2018
@@ -29,7 +33,7 @@
                 </div>
             </div>
 
-            <div class="item-slick1 item2-slick1" style="background-image: url(images/master-slide-03.jpg);">
+            <div class="item-slick1 item2-slick1" style="background-image: url(~/images/master-slide-03.jpg);">
                 <div class="wrap-content-slide1 sizefull flex-col-c-m p-l-15 p-r-15 p-t-150 p-b-170">
                     <span class="caption1-slide1 m-text1 t-center animated visible-false m-b-15" data-appear="rollIn">
                         Women Collection 2018
@@ -48,7 +52,7 @@
                 </div>
             </div>
 
-            <div class="item-slick1 item3-slick1" style="background-image: url(images/master-slide-04.jpg);">
+            <div class="item-slick1 item3-slick1" style="background-image: url(~/images/master-slide-04.jpg);">
                 <div class="wrap-content-slide1 sizefull flex-col-c-m p-l-15 p-r-15 p-t-150 p-b-170">
                     <span class="caption1-slide1 m-text1 t-center animated visible-false m-b-15" data-appear="rotateInDownLeft">
                         Women Collection 2018
@@ -71,413 +75,6 @@
     </div>
 </section>
 
-<!-- Header -->
-<header class="header1">
-    <!-- Header desktop -->
-    <div class="container-menu-header">
-        <div class="topbar">
-            <div class="topbar-social">
-                <a href="#" class="topbar-social-item fa fa-facebook"></a>
-                <a href="#" class="topbar-social-item fa fa-instagram"></a>
-                <a href="#" class="topbar-social-item fa fa-pinterest-p"></a>
-                <a href="#" class="topbar-social-item fa fa-snapchat-ghost"></a>
-                <a href="#" class="topbar-social-item fa fa-youtube-play"></a>
-            </div>
-
-            <span class="topbar-child1">
-                Free shipping for standard order over $100
-            </span>
-
-            <div class="topbar-child2">
-                <span class="topbar-email">
-                    fashe@example.com
-                </span>
-
-                <div class="topbar-language rs1-select2">
-                    <select class="selection-1" name="time">
-                        <option>USD</option>
-                        <option>EUR</option>
-                    </select>
-                </div>
-            </div>
-        </div>
-
-        <div class="wrap_header">
-            <!-- Logo -->
-            <a href="index.html" class="logo">
-                <img src="images/icons/logo.png" alt="IMG-LOGO">
-            </a>
-
-            <!-- Menu -->
-            <div class="wrap_menu">
-                <nav class="menu">
-                    <ul class="main_menu">
-                        <li>
-                            <a href="index.html">Home</a>
-                            <ul class="sub_menu">
-                                <li><a href="index.html">Homepage V1</a></li>
-                                <li><a href="home-02.html">Homepage V2</a></li>
-                                <li><a href="home-03.html">Homepage V3</a></li>
-                            </ul>
-                        </li>
-
-                        <li>
-                            <a href="product.html">Shop</a>
-                        </li>
-
-                        <li class="sale-noti">
-                            <a href="product.html">Sale</a>
-                        </li>
-
-                        <li>
-                            <a href="cart.html">Features</a>
-                        </li>
-
-                        <li>
-                            <a href="blog.html">Blog</a>
-                        </li>
-
-                        <li>
-                            <a href="about.html">About</a>
-                        </li>
-
-                        <li>
-                            <a href="contact.html">Contact</a>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
-
-            <!-- Header Icon -->
-            <div class="header-icons">
-                <a href="#" class="header-wrapicon1 dis-block">
-                    <img src="images/icons/icon-header-01.png" class="header-icon1" alt="ICON">
-                </a>
-
-                <span class="linedivide1"></span>
-
-                <div class="header-wrapicon2">
-                    <img src="images/icons/icon-header-02.png" class="header-icon1 js-show-header-dropdown" alt="ICON">
-                    <span class="header-icons-noti">0</span>
-
-                    <!-- Header cart noti -->
-                    <div class="header-cart header-dropdown">
-                        <ul class="header-cart-wrapitem">
-                            <li class="header-cart-item">
-                                <div class="header-cart-item-img">
-                                    <img src="images/item-cart-01.jpg" alt="IMG">
-                                </div>
-
-                                <div class="header-cart-item-txt">
-                                    <a href="#" class="header-cart-item-name">
-                                        White Shirt With Pleat Detail Back
-                                    </a>
-
-                                    <span class="header-cart-item-info">
-                                        1 x $19.00
-                                    </span>
-                                </div>
-                            </li>
-
-                            <li class="header-cart-item">
-                                <div class="header-cart-item-img">
-                                    <img src="images/item-cart-02.jpg" alt="IMG">
-                                </div>
-
-                                <div class="header-cart-item-txt">
-                                    <a href="#" class="header-cart-item-name">
-                                        Converse All Star Hi Black Canvas
-                                    </a>
-
-                                    <span class="header-cart-item-info">
-                                        1 x $39.00
-                                    </span>
-                                </div>
-                            </li>
-
-                            <li class="header-cart-item">
-                                <div class="header-cart-item-img">
-                                    <img src="images/item-cart-03.jpg" alt="IMG">
-                                </div>
-
-                                <div class="header-cart-item-txt">
-                                    <a href="#" class="header-cart-item-name">
-                                        Nixon Porter Leather Watch In Tan
-                                    </a>
-
-                                    <span class="header-cart-item-info">
-                                        1 x $17.00
-                                    </span>
-                                </div>
-                            </li>
-                        </ul>
-
-                        <div class="header-cart-total">
-                            Total: $75.00
-                        </div>
-
-                        <div class="header-cart-buttons">
-                            <div class="header-cart-wrapbtn">
-                                <!-- Button -->
-                                <a href="cart.html" class="flex-c-m size1 bg1 bo-rad-20 hov1 s-text1 trans-0-4">
-                                    View Cart
-                                </a>
-                            </div>
-
-                            <div class="header-cart-wrapbtn">
-                                <!-- Button -->
-                                <a href="#" class="flex-c-m size1 bg1 bo-rad-20 hov1 s-text1 trans-0-4">
-                                    Check Out
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Header Mobile -->
-    <div class="wrap_header_mobile">
-        <!-- Logo moblie -->
-        <a href="index.html" class="logo-mobile">
-            <img src="images/icons/logo.png" alt="IMG-LOGO">
-        </a>
-
-        <!-- Button show menu -->
-        <div class="btn-show-menu">
-            <!-- Header Icon mobile -->
-            <div class="header-icons-mobile">
-                <a href="#" class="header-wrapicon1 dis-block">
-                    <img src="images/icons/icon-header-01.png" class="header-icon1" alt="ICON">
-                </a>
-
-                <span class="linedivide2"></span>
-
-                <div class="header-wrapicon2">
-                    <img src="images/icons/icon-header-02.png" class="header-icon1 js-show-header-dropdown" alt="ICON">
-                    <span class="header-icons-noti">0</span>
-
-                    <!-- Header cart noti -->
-                    <div class="header-cart header-dropdown">
-                        <ul class="header-cart-wrapitem">
-                            <li class="header-cart-item">
-                                <div class="header-cart-item-img">
-                                    <img src="images/item-cart-01.jpg" alt="IMG">
-                                </div>
-
-                                <div class="header-cart-item-txt">
-                                    <a href="#" class="header-cart-item-name">
-                                        White Shirt With Pleat Detail Back
-                                    </a>
-
-                                    <span class="header-cart-item-info">
-                                        1 x $19.00
-                                    </span>
-                                </div>
-                            </li>
-
-                            <li class="header-cart-item">
-                                <div class="header-cart-item-img">
-                                    <img src="images/item-cart-02.jpg" alt="IMG">
-                                </div>
-
-                                <div class="header-cart-item-txt">
-                                    <a href="#" class="header-cart-item-name">
-                                        Converse All Star Hi Black Canvas
-                                    </a>
-
-                                    <span class="header-cart-item-info">
-                                        1 x $39.00
-                                    </span>
-                                </div>
-                            </li>
-
-                            <li class="header-cart-item">
-                                <div class="header-cart-item-img">
-                                    <img src="images/item-cart-03.jpg" alt="IMG">
-                                </div>
-
-                                <div class="header-cart-item-txt">
-                                    <a href="#" class="header-cart-item-name">
-                                        Nixon Porter Leather Watch In Tan
-                                    </a>
-
-                                    <span class="header-cart-item-info">
-                                        1 x $17.00
-                                    </span>
-                                </div>
-                            </li>
-                        </ul>
-
-                        <div class="header-cart-total">
-                            Total: $75.00
-                        </div>
-
-                        <div class="header-cart-buttons">
-                            <div class="header-cart-wrapbtn">
-                                <!-- Button -->
-                                <a href="cart.html" class="flex-c-m size1 bg1 bo-rad-20 hov1 s-text1 trans-0-4">
-                                    View Cart
-                                </a>
-                            </div>
-
-                            <div class="header-cart-wrapbtn">
-                                <!-- Button -->
-                                <a href="#" class="flex-c-m size1 bg1 bo-rad-20 hov1 s-text1 trans-0-4">
-                                    Check Out
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="btn-show-menu-mobile hamburger hamburger--squeeze">
-                <span class="hamburger-box">
-                    <span class="hamburger-inner"></span>
-                </span>
-            </div>
-        </div>
-    </div>
-
-    <!-- Menu Mobile -->
-    <div class="wrap-side-menu">
-        <nav class="side-menu">
-            <ul class="main-menu">
-                <li class="item-topbar-mobile p-l-20 p-t-8 p-b-8">
-                    <span class="topbar-child1">
-                        Free shipping for standard order over $100
-                    </span>
-                </li>
-
-                <li class="item-topbar-mobile p-l-20 p-t-8 p-b-8">
-                    <div class="topbar-child2-mobile">
-                        <span class="topbar-email">
-                            fashe@example.com
-                        </span>
-
-                        <div class="topbar-language rs1-select2">
-                            <select class="selection-1" name="time">
-                                <option>USD</option>
-                                <option>EUR</option>
-                            </select>
-                        </div>
-                    </div>
-                </li>
-
-                <li class="item-topbar-mobile p-l-10">
-                    <div class="topbar-social-mobile">
-                        <a href="#" class="topbar-social-item fa fa-facebook"></a>
-                        <a href="#" class="topbar-social-item fa fa-instagram"></a>
-                        <a href="#" class="topbar-social-item fa fa-pinterest-p"></a>
-                        <a href="#" class="topbar-social-item fa fa-snapchat-ghost"></a>
-                        <a href="#" class="topbar-social-item fa fa-youtube-play"></a>
-                    </div>
-                </li>
-
-                <li class="item-menu-mobile">
-                    <a href="index.html">Home</a>
-                    <ul class="sub-menu">
-                        <li><a href="index.html">Homepage V1</a></li>
-                        <li><a href="home-02.html">Homepage V2</a></li>
-                        <li><a href="home-03.html">Homepage V3</a></li>
-                    </ul>
-                    <i class="arrow-main-menu fa fa-angle-right" aria-hidden="true"></i>
-                </li>
-
-                <li class="item-menu-mobile">
-                    <a href="product.html">Shop</a>
-                </li>
-
-                <li class="item-menu-mobile">
-                    <a href="product.html">Sale</a>
-                </li>
-
-                <li class="item-menu-mobile">
-                    <a href="cart.html">Features</a>
-                </li>
-
-                <li class="item-menu-mobile">
-                    <a href="blog.html">Blog</a>
-                </li>
-
-                <li class="item-menu-mobile">
-                    <a href="about.html">About</a>
-                </li>
-
-                <li class="item-menu-mobile">
-                    <a href="contact.html">Contact</a>
-                </li>
-            </ul>
-        </nav>
-    </div>
-</header>
-
-<!-- Slide1 -->
-<section class="slide1">
-    <div class="wrap-slick1">
-        <div class="slick1">
-            <div class="item-slick1 item1-slick1" style="background-image: url(images/master-slide-02.jpg);">
-                <div class="wrap-content-slide1 sizefull flex-col-c-m p-l-15 p-r-15 p-t-150 p-b-170">
-                    <span class="caption1-slide1 m-text1 t-center animated visible-false m-b-15" data-appear="fadeInDown">
-                        Women Collection 2018
-                    </span>
-
-                    <h2 class="caption2-slide1 xl-text1 t-center animated visible-false m-b-37" data-appear="fadeInUp">
-                        New arrivals
-                    </h2>
-
-                    <div class="wrap-btn-slide1 w-size1 animated visible-false" data-appear="zoomIn">
-                        <!-- Button -->
-                        <a href="product.html" class="flex-c-m size2 bo-rad-23 s-text2 bgwhite hov1 trans-0-4">
-                            Shop Now
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="item-slick1 item2-slick1" style="background-image: url(images/master-slide-03.jpg);">
-                <div class="wrap-content-slide1 sizefull flex-col-c-m p-l-15 p-r-15 p-t-150 p-b-170">
-                    <span class="caption1-slide1 m-text1 t-center animated visible-false m-b-15" data-appear="rollIn">
-                        Women Collection 2018
-                    </span>
-
-                    <h2 class="caption2-slide1 xl-text1 t-center animated visible-false m-b-37" data-appear="lightSpeedIn">
-                        New arrivals
-                    </h2>
-
-                    <div class="wrap-btn-slide1 w-size1 animated visible-false" data-appear="slideInUp">
-                        <!-- Button -->
-                        <a href="product.html" class="flex-c-m size2 bo-rad-23 s-text2 bgwhite hov1 trans-0-4">
-                            Shop Now
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="item-slick1 item3-slick1" style="background-image: url(images/master-slide-04.jpg);">
-                <div class="wrap-content-slide1 sizefull flex-col-c-m p-l-15 p-r-15 p-t-150 p-b-170">
-                    <span class="caption1-slide1 m-text1 t-center animated visible-false m-b-15" data-appear="rotateInDownLeft">
-                        Women Collection 2018
-                    </span>
-
-                    <h2 class="caption2-slide1 xl-text1 t-center animated visible-false m-b-37" data-appear="rotateInUpRight">
-                        New arrivals
-                    </h2>
-
-                    <div class="wrap-btn-slide1 w-size1 animated visible-false" data-appear="rotateIn">
-                        <!-- Button -->
-                        <a href="product.html" class="flex-c-m size2 bo-rad-23 s-text2 bgwhite hov1 trans-0-4">
-                            Shop Now
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </div>
-</section>
 
 <!-- Banner -->
 <section class="banner bgwhite p-t-40 p-b-40">
@@ -486,7 +83,7 @@
             <div class="col-sm-10 col-md-8 col-lg-4 m-l-r-auto">
                 <!-- block1 -->
                 <div class="block1 hov-img-zoom pos-relative m-b-30">
-                    <img src="images/banner-02.jpg" alt="IMG-BENNER">
+                    <img src="~/images/banner-02.jpg" alt="IMG-BENNER">
 
                     <div class="block1-wrapbtn w-size2">
                         <!-- Button -->
@@ -498,7 +95,7 @@
 
                 <!-- block1 -->
                 <div class="block1 hov-img-zoom pos-relative m-b-30">
-                    <img src="images/banner-05.jpg" alt="IMG-BENNER">
+                    <img src="~/images/banner-05.jpg" alt="IMG-BENNER">
 
                     <div class="block1-wrapbtn w-size2">
                         <!-- Button -->
@@ -512,7 +109,7 @@
             <div class="col-sm-10 col-md-8 col-lg-4 m-l-r-auto">
                 <!-- block1 -->
                 <div class="block1 hov-img-zoom pos-relative m-b-30">
-                    <img src="images/banner-03.jpg" alt="IMG-BENNER">
+                    <img src="~/images/banner-03.jpg" alt="IMG-BENNER">
 
                     <div class="block1-wrapbtn w-size2">
                         <!-- Button -->
@@ -524,7 +121,7 @@
 
                 <!-- block1 -->
                 <div class="block1 hov-img-zoom pos-relative m-b-30">
-                    <img src="images/banner-07.jpg" alt="IMG-BENNER">
+                    <img src="~/images/banner-07.jpg" alt="IMG-BENNER">
 
                     <div class="block1-wrapbtn w-size2">
                         <!-- Button -->
@@ -538,7 +135,7 @@
             <div class="col-sm-10 col-md-8 col-lg-4 m-l-r-auto">
                 <!-- block1 -->
                 <div class="block1 hov-img-zoom pos-relative m-b-30">
-                    <img src="images/banner-04.jpg" alt="IMG-BENNER">
+                    <img src="~/images/banner-04.jpg" alt="IMG-BENNER">
 
                     <div class="block1-wrapbtn w-size2">
                         <!-- Button -->
@@ -550,7 +147,7 @@
 
                 <!-- block2 -->
                 <div class="block2 wrap-pic-w pos-relative m-b-30">
-                    <img src="images/icons/bg-01.jpg" alt="IMG">
+                    <img src="~/images/icons/bg-01.jpg" alt="IMG">
 
                     <div class="block2-content sizefull ab-t-l flex-col-c-m">
                         <h4 class="m-text4 t-center w-size3 p-b-8">
@@ -591,7 +188,7 @@
                     <!-- Block2 -->
                     <div class="block2">
                         <div class="block2-img wrap-pic-w of-hidden pos-relative block2-labelnew">
-                            <img src="images/item-02.jpg" alt="IMG-PRODUCT">
+                            <img src="~/images/item-02.jpg" alt="IMG-PRODUCT">
 
                             <div class="block2-overlay trans-0-4">
                                 <a href="#" class="block2-btn-addwishlist hov-pointer trans-0-4">
@@ -624,7 +221,7 @@
                     <!-- Block2 -->
                     <div class="block2">
                         <div class="block2-img wrap-pic-w of-hidden pos-relative">
-                            <img src="images/item-03.jpg" alt="IMG-PRODUCT">
+                            <img src="~/images/item-03.jpg" alt="IMG-PRODUCT">
 
                             <div class="block2-overlay trans-0-4">
                                 <a href="#" class="block2-btn-addwishlist hov-pointer trans-0-4">
@@ -657,7 +254,7 @@
                     <!-- Block2 -->
                     <div class="block2">
                         <div class="block2-img wrap-pic-w of-hidden pos-relative">
-                            <img src="images/item-05.jpg" alt="IMG-PRODUCT">
+                            <img src="~/images/item-05.jpg" alt="IMG-PRODUCT">
 
                             <div class="block2-overlay trans-0-4">
                                 <a href="#" class="block2-btn-addwishlist hov-pointer trans-0-4">
@@ -690,7 +287,7 @@
                     <!-- Block2 -->
                     <div class="block2">
                         <div class="block2-img wrap-pic-w of-hidden pos-relative block2-labelsale">
-                            <img src="images/item-07.jpg" alt="IMG-PRODUCT">
+                            <img src="~/images/item-07.jpg" alt="IMG-PRODUCT">
 
                             <div class="block2-overlay trans-0-4">
                                 <a href="#" class="block2-btn-addwishlist hov-pointer trans-0-4">
@@ -727,7 +324,7 @@
                     <!-- Block2 -->
                     <div class="block2">
                         <div class="block2-img wrap-pic-w of-hidden pos-relative block2-labelnew">
-                            <img src="images/item-02.jpg" alt="IMG-PRODUCT">
+                            <img src="~/images/item-02.jpg" alt="IMG-PRODUCT">
 
                             <div class="block2-overlay trans-0-4">
                                 <a href="#" class="block2-btn-addwishlist hov-pointer trans-0-4">
@@ -760,7 +357,7 @@
                     <!-- Block2 -->
                     <div class="block2">
                         <div class="block2-img wrap-pic-w of-hidden pos-relative">
-                            <img src="images/item-03.jpg" alt="IMG-PRODUCT">
+                            <img src="~/images/item-03.jpg" alt="IMG-PRODUCT">
 
                             <div class="block2-overlay trans-0-4">
                                 <a href="#" class="block2-btn-addwishlist hov-pointer trans-0-4">
@@ -793,7 +390,7 @@
                     <!-- Block2 -->
                     <div class="block2">
                         <div class="block2-img wrap-pic-w of-hidden pos-relative">
-                            <img src="images/item-05.jpg" alt="IMG-PRODUCT">
+                            <img src="~/images/item-05.jpg" alt="IMG-PRODUCT">
 
                             <div class="block2-overlay trans-0-4">
                                 <a href="#" class="block2-btn-addwishlist hov-pointer trans-0-4">
@@ -826,7 +423,7 @@
                     <!-- Block2 -->
                     <div class="block2">
                         <div class="block2-img wrap-pic-w of-hidden pos-relative block2-labelsale">
-                            <img src="images/item-07.jpg" alt="IMG-PRODUCT">
+                            <img src="~/images/item-07.jpg" alt="IMG-PRODUCT">
 
                             <div class="block2-overlay trans-0-4">
                                 <a href="#" class="block2-btn-addwishlist hov-pointer trans-0-4">
@@ -870,7 +467,7 @@
         <div class="row">
             <div class="col-sm-10 col-md-8 col-lg-6 m-l-r-auto p-t-15 p-b-15">
                 <div class="hov-img-zoom pos-relative">
-                    <img src="images/banner-08.jpg" alt="IMG-BANNER">
+                    <img src="~/images/banner-08.jpg" alt="IMG-BANNER">
 
                     <div class="ab-t-l sizefull flex-col-c-m p-l-15 p-r-15">
                         <span class="m-text9 p-t-45 fs-20-sm">
@@ -890,7 +487,7 @@
 
             <div class="col-sm-10 col-md-8 col-lg-6 m-l-r-auto p-t-15 p-b-15">
                 <div class="bgwhite hov-img-zoom pos-relative p-b-20per-ssm">
-                    <img src="images/shop-item-09.jpg" alt="IMG-BANNER">
+                    <img src="~/images/shop-item-09.jpg" alt="IMG-BANNER">
 
                     <div class="ab-t-l sizefull flex-col-c-b p-l-15 p-r-15 p-b-20">
                         <div class="t-center">
@@ -970,7 +567,7 @@
                 <!-- Block3 -->
                 <div class="block3">
                     <a href="blog-detail.html" class="block3-img dis-block hov-img-zoom">
-                        <img src="images/blog-01.jpg" alt="IMG-BLOG">
+                        <img src="~/images/blog-01.jpg" alt="IMG-BLOG">
                     </a>
 
                     <div class="block3-txt p-t-14">
@@ -994,7 +591,7 @@
                 <!-- Block3 -->
                 <div class="block3">
                     <a href="blog-detail.html" class="block3-img dis-block hov-img-zoom">
-                        <img src="images/blog-02.jpg" alt="IMG-BLOG">
+                        <img src="~/images/blog-02.jpg" alt="IMG-BLOG">
                     </a>
 
                     <div class="block3-txt p-t-14">
@@ -1018,7 +615,7 @@
                 <!-- Block3 -->
                 <div class="block3">
                     <a href="blog-detail.html" class="block3-img dis-block hov-img-zoom">
-                        <img src="images/blog-03.jpg" alt="IMG-BLOG">
+                        <img src="~/images/blog-03.jpg" alt="IMG-BLOG">
                     </a>
 
                     <div class="block3-txt p-t-14">
@@ -1052,7 +649,7 @@
     <div class="flex-w">
         <!-- Block4 -->
         <div class="block4 wrap-pic-w">
-            <img src="images/gallery-03.jpg" alt="IMG-INSTAGRAM">
+            <img src="~/images/gallery-03.jpg" alt="IMG-INSTAGRAM">
 
             <a href="#" class="block4-overlay sizefull ab-t-l trans-0-4">
                 <span class="block4-overlay-heart s-text9 flex-m trans-0-4 p-l-40 p-t-25">
@@ -1074,7 +671,7 @@
 
         <!-- Block4 -->
         <div class="block4 wrap-pic-w">
-            <img src="images/gallery-07.jpg" alt="IMG-INSTAGRAM">
+            <img src="~/images/gallery-07.jpg" alt="IMG-INSTAGRAM">
 
             <a href="#" class="block4-overlay sizefull ab-t-l trans-0-4">
                 <span class="block4-overlay-heart s-text9 flex-m trans-0-4 p-l-40 p-t-25">
@@ -1096,7 +693,7 @@
 
         <!-- Block4 -->
         <div class="block4 wrap-pic-w">
-            <img src="images/gallery-09.jpg" alt="IMG-INSTAGRAM">
+            <img src="~/images/gallery-09.jpg" alt="IMG-INSTAGRAM">
 
             <a href="#" class="block4-overlay sizefull ab-t-l trans-0-4">
                 <span class="block4-overlay-heart s-text9 flex-m trans-0-4 p-l-40 p-t-25">
@@ -1118,7 +715,7 @@
 
         <!-- Block4 -->
         <div class="block4 wrap-pic-w">
-            <img src="images/gallery-13.jpg" alt="IMG-INSTAGRAM">
+            <img src="~/images/gallery-13.jpg" alt="IMG-INSTAGRAM">
 
             <a href="#" class="block4-overlay sizefull ab-t-l trans-0-4">
                 <span class="block4-overlay-heart s-text9 flex-m trans-0-4 p-l-40 p-t-25">
@@ -1140,7 +737,7 @@
 
         <!-- Block4 -->
         <div class="block4 wrap-pic-w">
-            <img src="images/gallery-15.jpg" alt="IMG-INSTAGRAM">
+            <img src="~/images/gallery-15.jpg" alt="IMG-INSTAGRAM">
 
             <a href="#" class="block4-overlay sizefull ab-t-l trans-0-4">
                 <span class="block4-overlay-heart s-text9 flex-m trans-0-4 p-l-40 p-t-25">
