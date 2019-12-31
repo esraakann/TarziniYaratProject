@@ -1,0 +1,27 @@
+﻿@model IEnumerable<TarziniYaratProject.Entities.Models.Image>
+@{
+    ViewBag.Title = "CreateSliderImage";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="panel">
+    <br />
+    <form action="/AdminSiteProcesses/CreateSliderImage/" method="post" enctype="multipart/form-data">
+        <div class="form-group">
+            <label class="control-label col-md-3">Slider Resmi</label>
+            <div class="controls col-md-9">
+                <div class="fileupload fileupload-new" data-provides="fileupload">
+                    <span class="btn btn-white btn-file">
+                        <span class="fileupload-new"><i class="icon-paper-clip"></i> Resim Seç</span>
+                        <input type="file" name="fileUpload" class="default" />
+                    </span>
+                    <span class="fileupload-preview" style="margin-left:5px;"></span>
+                    <a href="#" class="close fileupload-exists" data-dismiss="fileupload" style="float: none; margin-left:5px;"></a>
+                </div>
+                <br />
+            </div>
+        </div>
+        <input type="submit" style="margin-left:347px;" class="btn btn-success" name="save" value="Kaydet" />
+    </form>
+    <br />
+</div>

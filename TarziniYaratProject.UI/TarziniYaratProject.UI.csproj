@@ -1742,6 +1742,8 @@
     <Content Include="Areas\Admin\Views\AdminProcesses\UpdateCategory.cshtml" />
     <Content Include="Areas\Admin\Views\AdminProcesses\BrandList.cshtml" />
     <Content Include="Areas\Admin\Views\AdminProcesses\CreateBrand.cshtml" />
+    <Content Include="Areas\Admin\Views\AdminSiteProcesses\CreateSliderImage.cshtml" />
+    <Content Include="Areas\Admin\Views\AdminSiteProcesses\SliderList.cshtml" />
     <None Include="Scripts\jquery-1.10.2-vsdoc.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -1754,12 +1756,14 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AppClasses\Settings.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\NinjectWebCommon.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
     <Compile Include="Areas\Admin\Controllers\AdminController.cs" />
     <Compile Include="Areas\Admin\Controllers\AdminProcessesController.cs" />
+    <Compile Include="Areas\Admin\Controllers\AdminSiteProcessesController.cs" />
     <Compile Include="Areas\Admin\Models\Genders.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -1932,6 +1936,7 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Controllers\" />
+    <Folder Include="Images\Sliders\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\TarziniYaratProject.BLL\TarziniYaratProject.BLL.csproj">
