@@ -64,7 +64,7 @@ namespace TarziniYaratProject.UI.App_Start
             kernel.Bind<IProductService>().To<ProductService>();
             kernel.Bind<IPurchaseDetailService>().To<PurchaseDetailService>();
             kernel.Bind<IPurchaseService>().To<PurchaseService>();
-
+            kernel.Bind<ISliderImageService>().To<SliderImageService>();
             kernel.Load<CustomDALModule>();
         }
     }

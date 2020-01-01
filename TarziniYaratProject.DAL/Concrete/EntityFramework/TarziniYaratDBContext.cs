@@ -14,7 +14,7 @@ namespace TarziniYaratProject.DAL.Concrete.EntityFramework
     {
         //@"Server=DESKTOP-781S50N\MSSQLSERVER2; Database = TarziniYaratDb; uid=sa; pwd = 123" ESRA
         //
-        public TarziniYaratDBContext() : base(@"Server=EMRE\SQLEXPRESS; Database = TarziniYaratDb; uid=admin; pwd = 321")
+        public TarziniYaratDBContext() : base(@"Server=DESKTOP-781S50N\MSSQLSERVER2; Database = TarziniYaratDb; uid=sa; pwd = 123")
         {
 
         }
@@ -34,6 +34,7 @@ namespace TarziniYaratProject.DAL.Concrete.EntityFramework
         public DbSet<Purchase> Purchase { get; set; }
         public DbSet<PurchaseDetail> PurchaseDetails { get; set; }
         public DbSet<Like> Like { get; set; }
+        public DbSet<SliderImage> SliderImage { get; set; }
         #endregion
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)

@@ -93,6 +93,7 @@
     <Compile Include="Abstract\EntityServices\IProductService.cs" />
     <Compile Include="Abstract\EntityServices\IPurchaseDetailService.cs" />
     <Compile Include="Abstract\EntityServices\IPurchaseService.cs" />
+    <Compile Include="Abstract\EntityServices\ISliderImageService.cs" />
     <Compile Include="Abstract\IBaseService.cs" />
     <Compile Include="Concrete\AddressService.cs" />
     <Compile Include="Concrete\BrandService.cs" />
@@ -107,6 +108,7 @@
     <Compile Include="Concrete\ProductService.cs" />
     <Compile Include="Concrete\PurchaseDetailService.cs" />
     <Compile Include="Concrete\PurchaseService.cs" />
+    <Compile Include="Concrete\SliderImageService.cs" />
     <Compile Include="IoC\Ninject\CustomDALModule.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

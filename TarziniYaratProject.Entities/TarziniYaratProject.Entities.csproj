@@ -56,6 +56,7 @@
     <Compile Include="Models\ProductDetail.cs" />
     <Compile Include="Models\Purchase.cs" />
     <Compile Include="Models\PurchaseDetail.cs" />
+    <Compile Include="Models\SliderImage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

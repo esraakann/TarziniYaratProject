@@ -15,8 +15,7 @@ namespace TarziniYaratProject.UI.Areas.Admin.Controllers
         ICategoryService _categoryService;
         IBrandService _brandService;
         IPersonService _personService;
-
-        public AdminProcessesController(IProductService productService, ICategoryService categoryService, IBrandService brandService, IPersonService personService)
+        public AdminProcessesController(IProductService productService, ICategoryService categoryService, IBrandService brandService,IPersonService personService)
         {
             _productService = productService;
             _categoryService = categoryService;
@@ -25,9 +24,17 @@ namespace TarziniYaratProject.UI.Areas.Admin.Controllers
         }
 
         // GET: Admin/AdminProcesses
-        public ActionResult ProductList(int catID = 0)
+        public ActionResult ProductList(int catID = 0,int brandID=0)
         {
-            return View(_productService.GetProductsByCatID(catID));
+            if (catID!=0 && brandID==0)
+            {
+                return View(_productService.GetProductsByCatID(catID));
+            }
+            else if (catID == 0 && brandID != 0)
+            {
+                return View(_productService.GetProductsByBrandID(brandID));
+            }
+            return View(_productService.GetAll());
         }
 
         //while creating a new product,we need to add product's category which was created before.
@@ -207,6 +214,64 @@ namespace TarziniYaratProject.UI.Areas.Admin.Controllers
         }
 
 
+        public ActionResult BrandList()
+        {
+            return View(_brandService.GetAll());
+        }
+        public ActionResult CreateBrand()
+        {
+            return View();
+        }
+        [HttpPost]
+        public ActionResult CreateBrand(Brand brand)
+        {
+            _brandService.Insert(brand);
+            return RedirectToAction("BrandList");
+        }
+
+        public JsonResult UpdateBrand(Brand brd)
+        {
+            try
+            {
+                Brand brand = _brandService.Get(brd.BrandID);
+                brand.Name = brd.Name;
+                _brandService.Update(brand);
+            }
+            catch (Exception ex)
+            {
+                return Json(ex.Message, JsonRequestBehavior.AllowGet);
+            }
+            return Json("ok", JsonRequestBehavior.AllowGet);
+        }
+
+        
+        public JsonResult GetBrand(int id)
+        {
+            Brand brand = _brandService.Get(id);
+            //model viewmodel olarak eklenirse çok güzel olur.
+            var model = new
+            {
+                Id = brand.BrandID,
+                Name = brand.Name
+            };
+
+            return brand != null ? Json(model, JsonRequestBehavior.AllowGet)
+                : Json(new Exception("Marka Bulunamadı").Message, JsonRequestBehavior.AllowGet);
+        }
+
+        [HttpPost]
+        public JsonResult DeleteBrand(int id)
+        {
+            try
+            {
+                _brandService.DeleteById(id);
+            }
+            catch (Exception ex)
+            {
+                return Json(ex.Message, JsonRequestBehavior.AllowGet);
+            }
+            return Json("ok", JsonRequestBehavior.AllowGet);
+        }
 
     }
 }

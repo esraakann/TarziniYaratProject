@@ -19,6 +19,8 @@
         protected override void Seed(TarziniYaratProject.DAL.Concrete.EntityFramework.TarziniYaratDBContext context)
         {
 
+            //SliderImage = new SliderImage();
+
             List<Brand> brands = new List<Brand>()
             {
               new Brand { Name = "Nike",BrandID =1},
@@ -43,19 +45,19 @@
 
             };
 
-            Person person = new Person();
-            person.PersonID = 1;
-            person.FirstName = "Fatih";
-            person.Surname = "Karademir";
-            person.IsActive = true;
-            person.Username = "fatihk";
-            person.Password = "12345";
-            person.CellPhone = "4562523523523";
-            person.PersonType = PersonType.Admin;
-            person.Email = "fatihkrdmr24@gmail.com";
-            person.Gender = "E";
-            person.Addresses.Add(
-            new Address { AddressID = 1, Country = "Turkey", PostCode = 34000, FullAddress = "Istanbul", IsActiveAddress = true, Distrinct = "Kagıthane", Province = "Ist", PersonID = 1 });
+            //Person person = new Person();
+            //person.PersonID = 1;
+            //person.FirstName = "Fatih";
+            //person.Surname = "Karademir";
+            //person.IsActive = true;
+            //person.Username = "fatihk";
+            //person.Password = "12345";
+            //person.CellPhone = "4562523523523";
+            //person.PersonType = PersonType.Admin;
+            //person.Email = "fatihkrdmr24@gmail.com";
+            //person.Gender = "E";
+            //person.Addresses.Add(
+            //new Address { AddressID = 1, Country = "Turkey", PostCode = 34000, FullAddress = "Istanbul", IsActiveAddress = true, Distrinct = "Kagıthane", Province = "Ist", PersonID = 1 });
 
             Person person2 = new Person
             {
@@ -66,7 +68,7 @@
                 IsActive = true,
                 Username = "mstfa",
                 Password = "sifre123",
-                PersonType = PersonType.Member,
+                PersonType = PersonType.Admin,
                 Email = "mustafaakcakaya@gmail.com",
                 Gender = "E",
                 Addresses = new List<Address>() { new Address { PersonID = 2, AddressID = 2, Country = "Turkey", Distrinct = "Bakirköy", Province = "Istanbul", PostCode = 34293, FullAddress = "string mah. char sk. no:15", IsActiveAddress = true } }
@@ -151,56 +153,56 @@
 
             };
 
-            List<Combine> combines = new List<Combine>()
-            {
-                new Combine
-                {
-                    CombineID = 1,
-                    Description="Günlük tarz",
-                    CombineImage = "imageyolu",
-                    PersonID=2,
-                    CommentCount=50,
-                    Likes = new List<Like>(),//{ new Like { LikeID=1, PersonID=2, CombineID=1, ProductID=0, CommentID=0 } },
-                    Comments = new List<Comment>()/*{ new Comment { CombineID=1,  ProductID= 0, CommentID=1, CommentDate=DateTime.Now, Content="Ooo çok güzel bir kombinmiş", PersonID=1,IsActive=true }, }*/
-                }
-            };
+            //List<Combine> combines = new List<Combine>()
+            //{
+            //    new Combine
+            //    {
+            //        CombineID = 1,
+            //        Description="Günlük tarz",
+            //        CombineImage = "imageyolu",
+            //        PersonID=2,
+            //        CommentCount=50,
+            //        Likes = new List<Like>(),//{ new Like { LikeID=1, PersonID=2, CombineID=1, ProductID=0, CommentID=0 } },
+            //        Comments = new List<Comment>()/*{ new Comment { CombineID=1,  ProductID= 0, CommentID=1, CommentDate=DateTime.Now, Content="Ooo çok güzel bir kombinmiş", PersonID=1,IsActive=true }, }*/
+            //    }
+            //};
 
-            Purchase purchase = new Purchase()
-            {
-                PurchaseID = 1,
-                PersonID = 1,
-                TotalPrice = 140,
-                CargoStatusID = 1,
-                PurchaseDetails = new List<PurchaseDetail>()
-                {
-                  new PurchaseDetail
-                  {
-                        PurchaseDetailID=1,
-                        ProductID=2,
-                        Count=1,
-                        PurchaseID=1,
-                        Price=80
-                  },
-                  new PurchaseDetail
-                  {
-                        PurchaseDetailID=2,
-                        ProductID=3,
-                        Count=1,
-                        PurchaseID=1,
-                        Price=60
-                  }
+            //Purchase purchase = new Purchase()
+            //{
+            //    PurchaseID = 1,
+            //    PersonID = 1,
+            //    TotalPrice = 140,
+            //    CargoStatusID = 1,
+            //    PurchaseDetails = new List<PurchaseDetail>()
+            //    {
+            //      new PurchaseDetail
+            //      {
+            //            PurchaseDetailID=1,
+            //            ProductID=2,
+            //            Count=1,
+            //            PurchaseID=1,
+            //            Price=80
+            //      },
+            //      new PurchaseDetail
+            //      {
+            //            PurchaseDetailID=2,
+            //            ProductID=3,
+            //            Count=1,
+            //            PurchaseID=1,
+            //            Price=60
+            //      }
 
-                }
+            //    }
 
-            };
+            //};
             context.Brand.AddRange(brands);
             context.Category.AddRange(categories);
             context.CargoStatus.AddRange(cargoStatuses);
-            context.Person.Add(person);
+            //context.Person.Add(person);
             context.Person.Add(person2);
             context.Product.AddRange(products);
-            context.Combine.AddRange(combines);
-            context.Purchase.Add(purchase);
+            //context.Combine.AddRange(combines);
+            //context.Purchase.Add(purchase);
 
             context.SaveChanges();
 

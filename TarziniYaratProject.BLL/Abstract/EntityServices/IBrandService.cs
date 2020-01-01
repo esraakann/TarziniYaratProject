@@ -9,5 +9,6 @@ namespace TarziniYaratProject.BLL.Abstract.EntityServices
 {
     public interface IBrandService : IBaseService<Brand>
     {
+        
     }
 }

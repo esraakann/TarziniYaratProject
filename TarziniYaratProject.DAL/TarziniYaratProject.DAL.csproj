@@ -64,6 +64,7 @@
     <Compile Include="Abstract\IProductDetailDAL.cs" />
     <Compile Include="Abstract\IPurchaseDAL.cs" />
     <Compile Include="Abstract\IPurchaseDetailDAL.cs" />
+    <Compile Include="Abstract\ISliderImageDAL.cs" />
     <Compile Include="Concrete\EntityFramework\DAL\AdressDAL.cs" />
     <Compile Include="Concrete\EntityFramework\DAL\BrandDAL.cs" />
     <Compile Include="Concrete\EntityFramework\DAL\CargoStatusDAL.cs" />
@@ -77,6 +78,7 @@
     <Compile Include="Concrete\EntityFramework\DAL\ProductDetailDAL.cs" />
     <Compile Include="Concrete\EntityFramework\DAL\PurchaseDAL.cs" />
     <Compile Include="Concrete\EntityFramework\DAL\PurchaseDetailDAL.cs" />
+    <Compile Include="Concrete\EntityFramework\DAL\SliderImageDAL.cs" />
     <Compile Include="Concrete\EntityFramework\Mapping\LikeMapping.cs" />
     <Compile Include="Concrete\EntityFramework\TarziniYaratDBContext.cs" />
     <Compile Include="Concrete\EntityFramework\TarziniYaratInitializer.cs" />
