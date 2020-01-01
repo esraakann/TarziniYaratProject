@@ -1738,6 +1738,9 @@
     <Content Include="Content\icon-font.min.css" />
     <Content Include="fonts\Linearicons-Free-v1.0.0\WebFont\Linearicons-Free.svg" />
     <Content Include="Content\lightbox.min.css" />
+    <Content Include="Images\Products\banner-01.jpg" />
+    <Content Include="Images\Products\banner-02.jpg" />
+    <Content Include="Images\Products\banner-03.jpg" />
     <Content Include="Scripts\lightbox.min.js" />
     <Content Include="Content\main.css" />
     <Content Include="Content\select2.min.css" />
