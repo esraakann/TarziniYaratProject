@@ -6,7 +6,6 @@ using System.Web;
 using System.Web.Mvc;
 using TarziniYaratProject.BLL.Abstract.EntityServices;
 using TarziniYaratProject.Entities.Models;
-using TarziniYaratProject.UI.Models;
 
 namespace TarziniYaratProject.UI.Areas.Admin.Controllers
 {
