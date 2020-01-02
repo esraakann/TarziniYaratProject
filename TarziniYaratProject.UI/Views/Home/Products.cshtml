@@ -3,6 +3,9 @@
     ViewBag.Title = "Products";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+
+<!--Veritabanında ki imagepath:/Images/Products/banner-01.jpg -->
+<!--IsActive True-->
 <div class="row">
     <div class="col-lg-1">
 
@@ -18,8 +21,8 @@
                     <li class="p-b-9">
                         @Html.ActionLink(@item.Name, "Products", new { catid = @item.CategoryID })
                         @*<a href="#" class="s-text7">
-                            @item.Name
-                        </a>*@
+                                @item.Name
+                            </a>*@
                     </li>
                 </ul>
             }
@@ -29,9 +32,9 @@
 
 
 
-</div>
+    </div>
 
-<div class="col-lg-9">
+    <div class="col-lg-9">
 
     @foreach (var product in Model)
     {
@@ -48,27 +51,27 @@
                                 <i class="icon-wishlist icon_heart dis-none" aria-hidden="true"></i>
                             </a>
 
-                            <div class="block2-btn-addcart w-size1 trans-0-4">
-                                <!-- Button -->
-                                <button class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4">
-                                    Add to Cart
-                                </button>
+                                <div class="block2-btn-addcart w-size1 trans-0-4">
+                                    <!-- Button -->
+                                    <button class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4">
+                                        Add to Cart
+                                    </button>
+                                </div>
                             </div>
                         </div>
-                    </div>
 
-                    <div class="block2-txt p-t-20">
-                        <a href="product-detail.html" class="block2-name dis-block s-text3 p-b-5">
-                            @product.Title
-                        </a>
+                        <div class="block2-txt p-t-20">
+                            <a href="product-detail.html" class="block2-name dis-block s-text3 p-b-5">
+                                @product.Title
+                            </a>
 
-                        <span class="block2-price m-text6 p-r-5">
-                            @product.Price.ToString("c") 
-                        </span>
+                            <span class="block2-price m-text6 p-r-5">
+                                @product.Price.ToString("c")
+                            </span>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    }
-</div>
+        }
     </div>
+</div>

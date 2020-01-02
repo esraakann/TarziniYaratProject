@@ -2193,10 +2193,10 @@
     <Compile Include="Areas\Admin\Models\Genders.cs" />
     <Compile Include="Models\HomeVM.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\UserProcessesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\PersonVM.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -2359,6 +2359,9 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Products.cshtml" />
+    <Content Include="Views\UserProcesses\Register.cshtml" />
+    <Content Include="Views\UserProcesses\ChooseProcess.cshtml" />
+    <Content Include="Views\UserProcesses\Login.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -2370,6 +2373,7 @@
     <Folder Include="App_Data\" />
     <Folder Include="Content\fonts\" />
     <Folder Include="Images\Sliders\" />
+    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\TarziniYaratProject.BLL\TarziniYaratProject.BLL.csproj">
