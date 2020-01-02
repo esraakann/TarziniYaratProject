@@ -77,6 +77,9 @@ namespace TarziniYaratProject.BLL.Concrete
             _dal.Update(entity);
         }
 
-
+        public ICollection<Product> GetProductsByCatName(string catName)
+        {
+           return _dal.GetAll(a => a.Category.Name == catName);
+        }
     }
 }

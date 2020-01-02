@@ -14,8 +14,6 @@
             AutomaticMigrationsEnabled = true;
         }
 
-
-
         protected override void Seed(TarziniYaratProject.DAL.Concrete.EntityFramework.TarziniYaratDBContext context)
         {
 

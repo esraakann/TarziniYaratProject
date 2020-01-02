@@ -1738,6 +1738,18 @@
     <Content Include="Content\icon-font.min.css" />
     <Content Include="fonts\Linearicons-Free-v1.0.0\WebFont\Linearicons-Free.svg" />
     <Content Include="Content\lightbox.min.css" />
+    <Content Include="Images\anton-levin-bgDSZ-w2gIM-unsplash.jpg" />
+    <Content Include="Images\anton-levin-P8prss71psk-unsplash.jpg" />
+    <Content Include="Images\ayakkabi.jpg" />
+    <Content Include="Images\canta.jpg" />
+    <Content Include="Images\elbise.jpg" />
+    <Content Include="Images\gozluk.jpg" />
+    <Content Include="Images\jess-harper-sunday-kfSjyxAWhEc-unsplash.jpg" />
+    <Content Include="Images\karina-tess-n6wMEeXdYHM-unsplash.jpg" />
+    <Content Include="Images\karina-tess-Tupz7k-JziU-unsplash.jpg" />
+    <Content Include="Images\lee-luis-_hIdIB6oeto-unsplash.jpg" />
+    <Content Include="Images\mohammed-hassan-Mq2TTSeeSoM-unsplash.jpg" />
+    <Content Include="Images\saat.jpg" />
     <Content Include="Scripts\lightbox.min.js" />
     <Content Include="Content\main.css" />
     <Content Include="Content\select2.min.css" />
@@ -2179,6 +2191,7 @@
     <Compile Include="Areas\Admin\Controllers\AdminProcessesController.cs" />
     <Compile Include="Areas\Admin\Controllers\AdminSiteProcessesController.cs" />
     <Compile Include="Areas\Admin\Models\Genders.cs" />
+    <Compile Include="Models\HomeVM.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -2355,9 +2368,8 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Controllers\" />
-    <Folder Include="Images\Sliders\" />
     <Folder Include="Content\fonts\" />
+    <Folder Include="Images\Sliders\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\TarziniYaratProject.BLL\TarziniYaratProject.BLL.csproj">
@@ -2367,6 +2379,10 @@
     <ProjectReference Include="..\TarziniYaratProject.Core\TarziniYaratProject.Core.csproj">
       <Project>{2BACD956-764E-4C68-A3CA-DC04B02DCAF6}</Project>
       <Name>TarziniYaratProject.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TarziniYaratProject.DAL\TarziniYaratProject.DAL.csproj">
+      <Project>{6E612A9E-53F9-496A-B981-D878345AB7C6}</Project>
+      <Name>TarziniYaratProject.DAL</Name>
     </ProjectReference>
     <ProjectReference Include="..\TarziniYaratProject.Entities\TarziniYaratProject.Entities.csproj">
       <Project>{50831E10-88BA-4EDC-80FC-3CCF5CADFB05}</Project>

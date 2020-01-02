@@ -11,5 +11,6 @@ namespace TarziniYaratProject.BLL.Abstract.EntityServices
     {
        ICollection<Product> GetProductsByCatID(int catID);
         ICollection<Product> GetProductsByBrandID(int brandID);
+        ICollection<Product> GetProductsByCatName(string catName);
     }
 }
