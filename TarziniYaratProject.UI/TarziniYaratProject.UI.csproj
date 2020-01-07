@@ -1748,6 +1748,7 @@
     <Content Include="Images\karina-tess-n6wMEeXdYHM-unsplash.jpg" />
     <Content Include="Images\karina-tess-Tupz7k-JziU-unsplash.jpg" />
     <Content Include="Images\lee-luis-_hIdIB6oeto-unsplash.jpg" />
+    <Content Include="Images\logo1.png" />
     <Content Include="Images\mohammed-hassan-Mq2TTSeeSoM-unsplash.jpg" />
     <Content Include="Images\saat.jpg" />
     <Content Include="Scripts\lightbox.min.js" />
@@ -2373,7 +2374,6 @@
     <Folder Include="App_Data\" />
     <Folder Include="Content\fonts\" />
     <Folder Include="Images\Sliders\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\TarziniYaratProject.BLL\TarziniYaratProject.BLL.csproj">
