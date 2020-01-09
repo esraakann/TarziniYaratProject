@@ -9,8 +9,8 @@ using TarziniYaratProject.Entities.Models;
 
 namespace TarziniYaratProject.DAL.Concrete.EntityFramework.DAL
 {
-    public class SliderImageDAL: EFRepositoryBase<SliderImage, TarziniYaratDBContext>, ISliderImageDAL
+    public class SliderImageDAL : EFRepositoryBase<SliderImage, TarziniYaratDBContext>, ISliderImageDAL
     {
-
+      
     }
 }

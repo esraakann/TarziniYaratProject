@@ -1726,6 +1726,7 @@
     <Content Include="Areas\Admin\Content\js\jquery.min.js" />
     <Content Include="Areas\Admin\Content\yedek\vendor\jquery\jquery.slim.js" />
     <Content Include="Areas\Admin\Content\yedek\vendor\jquery\jquery.slim.min.js" />
+    <Content Include="Areas\Admin\Views\Shared\_AdminLayout.cshtml" />
     <Content Include="Content\animate.css" />
     <Content Include="Content\animsition.min.css" />
     <Content Include="Content\bootstrap-theme.css" />
@@ -2163,6 +2164,11 @@
     <Content Include="fonts\montserrat\Montserrat-Regular.ttf" />
     <Content Include="fonts\montserrat\Montserrat-Bold.ttf" />
     <Content Include="fonts\Linearicons-Free.ttf" />
+    <Content Include="Areas\Admin\Views\AdminSiteProcesses\CreateSliderImage.cshtml" />
+    <Content Include="Areas\Admin\Views\AdminSiteProcesses\SliderList.cshtml" />
+    <Content Include="Areas\Admin\Views\AdminProcesses\BrandList.cshtml" />
+    <Content Include="Areas\Admin\Views\AdminProcesses\CreateBrand.cshtml" />
+    <Content Include="Areas\Admin\Views\AdminProcesses\UserList.cshtml" />
     <None Include="Scripts\jquery-1.10.2-vsdoc.js" />
     <Content Include="Scripts\countdowntime.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
@@ -2198,12 +2204,12 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\LoginVM.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\web.config" />
     <Content Include="Areas\Admin\Views\web.config" />
-    <Content Include="Areas\Admin\Views\Shared\_AdminLayout.cshtml" />
     <Content Include="Areas\Admin\Content\yedek\vendor\bootstrap\js\bootstrap.bundle.js.map" />
     <Content Include="Areas\Admin\Content\yedek\vendor\bootstrap\js\bootstrap.bundle.min.js.map" />
     <Content Include="Areas\Admin\Content\yedek\vendor\bootstrap\js\bootstrap.js.map" />
@@ -2363,6 +2369,7 @@
     <Content Include="Views\UserProcesses\Register.cshtml" />
     <Content Include="Views\UserProcesses\ChooseProcess.cshtml" />
     <Content Include="Views\UserProcesses\Login.cshtml" />
+    <Content Include="Views\Home\SliderList.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

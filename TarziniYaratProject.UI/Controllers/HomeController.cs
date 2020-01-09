@@ -30,7 +30,7 @@ namespace TarziniYaratProject.UI.Controllers
             //HomeVM homeVM = new HomeVM();
             //homeVM.Images = _imageService.GetAll().ToList();
             //homeVM.Products = _productService.GetAll().ToList();
-            ViewBag.SliderImages = _sliderImageService.GetAll();
+           
             return View(_productService.GetAll().ToList());
             
         }
@@ -62,6 +62,12 @@ namespace TarziniYaratProject.UI.Controllers
         public ActionResult Contact()
         {
             return View();
+        }
+
+        public PartialViewResult SliderList()
+        {
+
+            return PartialView(_sliderImageService.GetAll());
         }
     }
 }

@@ -14,22 +14,7 @@ namespace TarziniYaratProject.UI.App_Start
 
             bundles.Add(new ScriptBundle("~/js/adminLayout").Include("~/Areas/Admin/Content/js/jquery.min.js", "~/Areas/Admin/Content/js/bootstrap.bundle.min.js", "~/Areas/Admin/Content/js/jquery.easing.min.js", "~/Areas/Admin/Content/js/sb-admin-2.min.js", "~/Areas/Admin/Content/js/Chart.min.js", "~/Areas/Admin/Content/js/chart-area-demo.js", "~/Areas/Admin/Content/js/chart-pie-demo.js"));
 
-
-    //@*< script src = "~/Areas/Admin/Content/js/jquery.min.js" ></ script >
- 
-    // < script src = "~/Areas/Admin/Content/js/bootstrap.bundle.min.js" ></ script >
-  
-    //  < script src = "~/Areas/Admin/Content/js/jquery.easing.min.js" ></ script >
-   
-    //   < script src = "~/Areas/Admin/Content/js/sb-admin-2.min.js" ></ script >
-    
-    //    < script src = "~/Areas/Admin/Content/js/Chart.min.js" ></ script >
-     
-    //     < script src = "~/Areas/Admin/Content/js/chart-area-demo.js" ></ script >
-      
-    //      < script src = "~/Areas/Admin/Content/js/chart-pie-demo.js" ></ script > *@
-
-                   BundleTable.EnableOptimizations = true;
+            BundleTable.EnableOptimizations = true;
         }
     }
 }

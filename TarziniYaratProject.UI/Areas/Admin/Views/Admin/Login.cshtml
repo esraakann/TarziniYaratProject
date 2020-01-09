@@ -35,18 +35,18 @@
                                         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
                                         <form class="user">
                                             <div class="form-group">
-                                                @Html.TextBoxFor(model => model.Username, new { @class = "form-control form-control-user", @placeholder = "Kullanıcı Adınızı Giriniz..." })
+                                                @Html.TextBoxFor(model => model.Username, new { @class = "form-control form-control-user",id="userName" , @placeholder = "Kullanıcı Adınızı Giriniz..." })
                                                 @Html.ValidationMessageFor(model => model.Username, "", new { @class = "text-danger" })
 
                                             </div>
                                             <div class="form-group">
-                                                @Html.TextBoxFor(model => model.Password, new { @class = "form-control form-control-user", @placeholder = "Şifrenizi Giriniz...", @type = "password" })
+                                                @Html.TextBoxFor(model => model.Password, new { @class = "form-control form-control-user", id = "password",@placeholder = "Şifrenizi Giriniz...", @type = "password" })
                                                 @Html.ValidationMessageFor(model => model.Password, "", new { @class = "text-danger" })
                                             </div>
                                             <!--Beni hatırla checkbox-->
                                             <div class="form-group">
                                                 <div class="custom-control custom-checkbox small">
-                                                    <input type="checkbox" class="custom-control-input" id="customCheck">
+                                                    <input type="checkbox" class="custom-control-input" value="true" name="Remember" id="customCheck">
                                                     <label class="custom-control-label" for="customCheck">Beni Hatırla</label>
                                                 </div>
                                             </div>

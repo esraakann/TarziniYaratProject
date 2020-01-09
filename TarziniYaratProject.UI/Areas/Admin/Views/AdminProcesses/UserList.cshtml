@@ -67,7 +67,6 @@
     <script>
         $(".btnPasif").click(function () {
             var personID = $(this).attr("person-id");
-
             $.ajax({
                 url: "/AdminProcesses/UpdatePerson/" + personID,
                 type: "POST",

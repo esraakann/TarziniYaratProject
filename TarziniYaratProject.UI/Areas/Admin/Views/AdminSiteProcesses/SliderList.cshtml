@@ -1,8 +1,10 @@
 ﻿@model IEnumerable<TarziniYaratProject.Entities.Models.SliderImage>
 
 @{
-    ViewBag.Title = "SliderList";
-    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+                /**/
+
+                ViewBag.Title = "SliderList";
+                Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
 }
 
 <h2>Slider Resim Liste</h2>
@@ -24,21 +26,47 @@
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @*@Html.DisplayFor(modelItem => item.ImagePath)*@
-            <img src="@item.ImagePath" alt="sliderImage" width="150" height="100"/>
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.IsActive)
-        </td>
-        @*<td>
-            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
-            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
-            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
-        </td>*@
-    </tr>
-}
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @*@Html.DisplayFor(modelItem => item.ImagePath)*@
+                <img src="@item.ImagePath" alt="sliderImage" width="150" height="100" />
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IsActive)
+            </td>
+            <td>
+                <a href="#" class="btn btn-btn-circle btn-xs btnActive" slider-id="@item.SliderImageID">
+                    <i class="fas fa-redo"></i>
+                </a>
+                @*@ViewData["ErrorActive"] |
+                    @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })*@
+            </td>
+        </tr>
+    }
 
 </table>
+
+@section scripts{
+    <script>
+        $(".btnActive").click(function () {
+            var sliderID = $(this).attr("slider-id");
+            $.ajax({
+                url: "/AdminSiteProcesses/UpdateActive/" + sliderID,
+                type: "POST",
+                dataType: "json",
+                success: function (resp) {
+                    if (resp == "ok") {
+                        alert("Başarılı")
+                        window.location.reload();
+                    }
+                    else {
+                        alert("İşlem gerçekleştirilemedi");
+                    }
+
+                }
+            })
+        });
+    </script>
+}

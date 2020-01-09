@@ -59,7 +59,7 @@
                 <a href="#" class="btn btn-success btn-circle btn-xs btnUpdate" data-id=@item.ProductID>
                     <i class="fas fa-check"></i>
                 </a>
-                <a href="#" class="btn btn-info btn-circle btn-xs ">
+                <a href="#" class="btn btn-info btn-circle btn-xs btnProductDetail" data-id="@item.ProductID">
                     <i class="fas fa-info-circle"></i>
                 </a>
                 <a href="#" class="btn btn-danger btn-circle btn-xs btnDelete" prod-id="@item.ProductID">
@@ -113,6 +113,46 @@
     </div>
 </div>
 
+<div class="modal fade" id="ShowModalProductDetail">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4>Ürün Detay</h4>
+                <a href="#" class="close" data-dismiss="modal">&times;</a>
+            </div>
+            <div class="modal-body">
+                <form id="GetProductDetail">
+
+                    <div class="form-group">
+                        <div class="input-group">
+                            <span class="input-group-addon">Beden</span>
+                            <input class="form-control" type="text" name="Size" id="Size" />
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="input-group">
+                            <span class="input-group-addon">Renk</span>
+                            <input class="form-control" type="text" name="Color" id="Color"/>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="input-group">
+                            <span class="input-group-addon">Stok</span>
+                            <input class="form-control" type="number" name="Stock" id="Stock"/>
+                        </div>
+                    </div>
+
+                </form>
+                @*<div class="form-group">
+                    <button class="btn btn-success form-control" id="btnUpdateChanges" type="submit"><i class="glyphicon glyphicon-floppy-save" data-id="0">Kaydet</i></button>
+                </div>*@
+            </div>
+        </div>
+    </div>
+</div>
+
 @section scripts{
     <script>
         $("#btnUpdateChanges").click(function () {
@@ -146,8 +186,6 @@
             })
 
         })
-
-
         $(".btnUpdate").click(function () {
             $("#ShowModal").modal();
             var prodID = $(this).attr("data-id")
@@ -169,10 +207,6 @@
                 }
             });
         });
-
-
-
-
         $(".btnDelete").click(function () {
             var prodID = $(this).attr("prod-id");
 
@@ -195,6 +229,25 @@
                 }
             });
         });
-
+        $(".btnProductDetail").click(function () {
+            $("#ShowModalProductDetail").modal();
+            var prodID = $(this).attr("data-id");
+            $.ajax({
+                url: "/AdminProcesses/GetProductDetail/" + prodID,
+                type: "GET",
+                dataType: "json",
+                success: function (data) {
+                    if (data != null) {
+                        $("#Size").val(data.Size);
+                        $("#Color").val(data.Color);
+                        $("#Stock").val(data.Stock);
+                    }
+                },
+                onerror: function (err) {
+                    alert("Hata oluştu. Geliştirici detayları için Console'a bakınız.")
+                    console.log(err);
+                }
+            });
+        });
     </script>
 }

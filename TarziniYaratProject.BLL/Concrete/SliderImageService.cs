@@ -45,5 +45,20 @@ namespace TarziniYaratProject.BLL.Concrete
         {
             _dal.Update(entity);
         }
+
+        public bool UpdateActive(int id)
+        {
+            SliderImage slider = Get(id);
+            if (slider.IsActive)
+            {
+                slider.IsActive = false;
+            }
+            else
+            {
+                slider.IsActive = true;
+            }
+            _dal.Update(slider);
+            return true;
+        }
     }
 }

@@ -9,6 +9,6 @@ namespace TarziniYaratProject.BLL.Abstract.EntityServices
 {
     public interface ISliderImageService : IBaseService<SliderImage>
     {
-        
+        bool UpdateActive(int id);
     }
 }

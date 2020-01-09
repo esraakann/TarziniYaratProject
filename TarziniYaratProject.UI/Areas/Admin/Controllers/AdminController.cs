@@ -26,24 +26,36 @@ namespace TarziniYaratProject.UI.Areas.Admin.Controllers
         public ActionResult Login()
         {
             ViewBag.Danger = null;
+            if (Request.Cookies["login"] != null)
+            {
+                HttpCookie admin = Request.Cookies["login"];
+                Person person = new Person();
+                person.Username = admin["userName"];
+               
+                Session["Username"] = person.Username;
+                return RedirectToAction("ProductList", "AdminProcesses");
+            }
             return View();
         }
 
         [HttpPost]
-        public ActionResult Login(Person p)
+        public ActionResult Login(Person p, bool Remember=false)
         {
 
             Person login = _personService.AdminLogin(p);
             if (login != null)
             {
-                Session["PersonID"] = login.PersonID;
+                if (Remember)
+                {
+                    HttpCookie cookie = new HttpCookie("login");
+                    cookie.Values.Add("userName", p.Username);
+                    cookie.Values.Add("password", p.Password);
+                    cookie.Expires = DateTime.Now.AddDays(15);
+                    Response.Cookies.Add(cookie);
+                }
                 Session["Username"] = login.Username;
-                Session["Password"] = login.Password;
-
                 return RedirectToAction("ProductList", "AdminProcesses");
-
             }
-
             else
             {
                 ViewBag.Danger = "Kullanıcı Adı veya Şifrenizi Kontrol Ediniz.";
@@ -53,8 +65,20 @@ namespace TarziniYaratProject.UI.Areas.Admin.Controllers
 
         public ActionResult LogOut()
         {
+            ClearCookie();
             Session.Abandon();
             return RedirectToAction("Login");
+        }
+
+
+        public void ClearCookie()
+        {
+            if (Request.Cookies.AllKeys.Contains("login"))
+            {
+                HttpCookie cookie = Request.Cookies["login"];
+                cookie.Expires = DateTime.Now.AddDays(-1);
+                Response.Cookies.Add(cookie);
+            }
         }
 
     }

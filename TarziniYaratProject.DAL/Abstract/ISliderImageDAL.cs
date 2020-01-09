@@ -10,5 +10,6 @@ namespace TarziniYaratProject.DAL.Abstract
 {
     public interface ISliderImageDAL : IEntityRepository<SliderImage>
     {
+     
     }
 }

@@ -11,16 +11,21 @@ namespace TarziniYaratProject.UI.Areas.Admin.Controllers
 {
     public class AdminProcessesController : Controller
     {
+        ISliderImageService _sliderImageService;
+
         IProductService _productService;
         ICategoryService _categoryService;
         IBrandService _brandService;
         IPersonService _personService;
-        public AdminProcessesController(IProductService productService, ICategoryService categoryService, IBrandService brandService,IPersonService personService)
+        IProductDetailService _productDetailService;
+        public AdminProcessesController(IProductService productService, ICategoryService categoryService, IBrandService brandService,IPersonService personService, IProductDetailService productDetailService, ISliderImageService sliderImageService)
         {
             _productService = productService;
             _categoryService = categoryService;
             _brandService = brandService;
             _personService = personService;
+            _productDetailService = productDetailService;
+            _sliderImageService = sliderImageService;
         }
 
         // GET: Admin/AdminProcesses
@@ -129,6 +134,22 @@ namespace TarziniYaratProject.UI.Areas.Admin.Controllers
             return product != null ? Json(model, JsonRequestBehavior.AllowGet)
                 : Json(new Exception("Ürün Bulunamadı").Message, JsonRequestBehavior.AllowGet);
         }
+
+        public JsonResult GetProductDetail(int id)
+        {
+            ProductDetail productDetail = _productDetailService.Get(id);
+            var model = new
+            {
+                Id = productDetail.ProductID,
+                Size = productDetail.Size,
+                Color=productDetail.Color,
+                Stock=productDetail.Stock
+            };
+
+            return productDetail != null ? Json(model, JsonRequestBehavior.AllowGet)
+                : Json(new Exception("Ürün Detayı Bulunamadı").Message, JsonRequestBehavior.AllowGet);
+        }
+
         public JsonResult UpdateProduct(Product prod)
         {
             try
@@ -273,5 +294,6 @@ namespace TarziniYaratProject.UI.Areas.Admin.Controllers
             return Json("ok", JsonRequestBehavior.AllowGet);
         }
 
+      
     }
 }

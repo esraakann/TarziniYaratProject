@@ -47,5 +47,19 @@ namespace TarziniYaratProject.UI.Areas.Admin.Controllers
             }
             return RedirectToAction("SliderList","Admin/AdminSiteProcesses"); 
         }
+
+        public JsonResult UpdateActive(int id)
+        {
+            try
+            {
+                _sliderImageService.UpdateActive(id);
+            }
+            catch (Exception)
+            {
+                ViewData["ErrorActive"] = "Hata";
+            }
+            return Json("ok", JsonRequestBehavior.AllowGet);
+        }
+
     }
 }
