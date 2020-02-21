@@ -4,6 +4,7 @@ using System.Data.Entity;
 using System.Data.Entity.ModelConfiguration.Conventions;
 using System.Linq;
 using System.Text;
+using System.Data.SqlClient;
 using System.Threading.Tasks;
 using TarziniYaratProject.DAL.Concrete.EntityFramework.Mapping;
 using TarziniYaratProject.Entities.Models;
@@ -13,8 +14,8 @@ namespace TarziniYaratProject.DAL.Concrete.EntityFramework
     public class TarziniYaratDBContext : DbContext
     {
         //@"Server=DESKTOP-781S50N\MSSQLSERVER2; Database = TarziniYaratDb; uid=sa; pwd = 123" ESRA
-        //
-        public TarziniYaratDBContext() : base("Server=.; Database = TarziniYaratDb; uid=sa; pwd = 123")
+        
+        public TarziniYaratDBContext() : base("TarziniYarat")
         {
 
         }

@@ -8,5 +8,6 @@ namespace TarziniYaratProject.Core.Entity
 {
     public interface IEntity
     {
+
     }
 }
